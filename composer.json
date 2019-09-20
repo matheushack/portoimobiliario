@@ -1,0 +1,22 @@
+{
+  "name": "matheushack/portoimobiliario",
+  "description": "Comunicação webservice Porto Seguro Imobiliário",
+  "license": "MIT",
+  "authors": [{
+    "name": "Matheus Hack",
+    "email": "matheushackdiniz@hotmail.com"
+  }],
+  "require": {
+    "php": ">=7.0",
+    "vlucas/phpdotenv": "^3.5",
+    "cakephp/utility": "^3.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "MatheusHack\\PortoImobiliario\\": "src/PortoImobiliario/"
+    },
+    "files": [
+      "src/PortoImobiliario/Config/app.php"
+    ]
+  }
+}
