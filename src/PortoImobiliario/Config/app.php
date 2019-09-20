@@ -5,5 +5,7 @@
  * Date: 03/09/19
  * Time: 11:09
  */
-$dotenv = Dotenv\Dotenv:: create($_SERVER['DOCUMENT_ROOT']);
-$dotenv->load();
+try {
+    $dotenv = Dotenv\Dotenv:: create($_SERVER['DOCUMENT_ROOT']);
+    $dotenv->load();
+}catch (Exception $e){}
