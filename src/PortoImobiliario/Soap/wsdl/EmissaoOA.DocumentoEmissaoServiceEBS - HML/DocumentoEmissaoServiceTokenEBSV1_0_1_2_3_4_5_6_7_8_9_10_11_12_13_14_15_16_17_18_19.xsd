@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/admin/composicaomercadoriaebo/v1" elementFormDefault="qualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/admin/composicaomercadoriaebo/v1" xmlns:nbm="http://www.portoseguro.com.br/ramoselementares/admin/ncmntmebo/v1" xmlns:aud="http://www.portoseguro.com.br/ramoselementares/auditoriaebo/v1">
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/auditoriaebo/v1"/>
+  <xs:complexType name="ListaComposicaoMercadoriaEBO">
+    <xs:sequence>
+      <xs:element name="composicaoMercadoria" maxOccurs="unbounded" minOccurs="0" type="ComposicaoMercadoriaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ComposicaoMercadoriaEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao/>
+        <entidade>composicao mercadoria</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoMercadoria" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo mercadoria</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeMercadoria" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>mercadoria</entidade>
+            <atributo>nome mercadoria</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataInicioVigencia" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data inicio vigencia</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimVigencia" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data fim vigencia</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaNbm" minOccurs="0" type="ListaNbmEBO"/>
+      <xs:element name="listaNcm" minOccurs="0" type="ListaNcmEBO"/>
+      <!--Inclusao de auditoria - 10012017 - eduardo.rosell-->
+      <xs:element name="auditoria" minOccurs="0" type="aud:AuditoriaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaNbmEBO">
+    <xs:sequence>
+      <xs:element name="nbm" maxOccurs="unbounded" minOccurs="0" type="NbmEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaNcmEBO">
+    <xs:sequence>
+      <xs:element name="listaNcm" maxOccurs="unbounded" minOccurs="0" type="NcmEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NbmEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao/>
+        <entidade>composicao mercadoria nomenclatura brasileiro mercadoria</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoNomenclaturaBrasileiroMercadoria" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo nomenclatura brasileiro mercadoria</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoMercadoria" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>nomenclatura brasileiro mercadoria</entidade>
+            <atributo>codigo tipo mercadoria</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeNomenclaturaBrasileiroMercadoria" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>nomenclatura brasileiro mercadoria</entidade>
+            <atributo>nome nomenclatura brasileiro mercadoria</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>nomenclatura brasileiro mercadoria</entidade>
+            <atributo>Flag Ativo</atributo>
+            <regrasMapeamento/>
+            <descricao>Indica se o registro esta ativo ou inativo, uma vez que nao havera delecao de registros em dados cadastrais. DOMiNIO: S - Sim (ativo) N - Nao (inativo)</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaNbmEmpresa" minOccurs="0" type="ListaNbmEmpresaEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaTipoEmbalagemNbm" minOccurs="0" type="ListaTipoEmbalagemNbmEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaNbmEmpresaEBO">
+    <xs:sequence>
+      <xs:element name="nbmEmpresa" maxOccurs="unbounded" minOccurs="0" type="NbmEmpresaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NbmEmpresaEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao/>
+        <entidade>nomenclatura brasileiro mercadoria empresa</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoEmpresa" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Empresa</atributo>
+            <regrasMapeamento/>
+            <descricao>E o codigo da empresa.</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+            <regrasMapeamento/>
+            <descricao>Indica se o registro esta ativo ou inativo, uma vez que nao havera delecao de registros em dados cadastrais. DOMiNIO: S - Sim (ativo) N - Nao (inativo)</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NcmEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao/>
+        <entidade>composicao mercadoria nomenclatura comum mercosul mercadoria</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoNcm" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo nomenclatura comum mercosul mercadoria</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoMercadoria" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>nomenclatura comum mercosul mercadoria</entidade>
+            <atributo>codigo tipo mercadoria</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeNcm" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>nomenclatura comum mercosul mercadoria</entidade>
+            <atributo>nome nomenclatura comum mercosul mercadoria</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>nomenclatura comum mercosul mercadoria</entidade>
+            <atributo>Flag Ativo</atributo>
+            <regrasMapeamento/>
+            <descricao>Indica se o registro esta ativo ou inativo, uma vez que nao havera delecao de registros em dados cadastrais. DOMiNIO: S - Sim (ativo) N - Nao (inativo)</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaNcmEmpresa" minOccurs="0" type="ListaNcmEmpresaEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaTipoEmbalagemNcm" minOccurs="0" type="ListaTipoEmbalagemNcmEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaNcmEmpresaEBO">
+    <xs:sequence>
+      <xs:element name="ncmEmpresa" maxOccurs="unbounded" minOccurs="0" type="NcmEmpresaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NcmEmpresaEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao/>
+        <entidade>nomenclatura comum mercosul mercadoria empresa</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoEmpresa" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Empresa</atributo>
+            <regrasMapeamento/>
+            <descricao>E o codigo da empresa.</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+            <regrasMapeamento/>
+            <descricao>Indica se o registro esta ativo ou inativo, uma vez que
+							nao havera delecao de registros em dados cadastrais. DOMiNIO: S -
+							Sim (ativo) N - Nao (inativo)</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaTipoEmbalagemNbmEBO">
+    <xs:sequence>
+      <xs:element name="tipoEmbalagemNbm" maxOccurs="unbounded" minOccurs="0" type="TipoEmbalagemNbmEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TipoEmbalagemNbmEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao/>
+        <entidade>tipo embalagem nomenclatura brasileiro mercadoria</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoTipoEmbalagem" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo embalagem</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Campo que deve ser removido em R4 - transportes BACKLOG EXCLUSAO-->
+      <xs:element name="nomeTipoEmbalagem" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>Tipo Embalagem Transporte</entidade>
+            <atributo>nome tipo embalagem</atributo>
+            <regrasMapeamento>Bind com o campo Codigo Tipo Embalagem do dominio Tipo Embalagem</regrasMapeamento>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+            <regrasMapeamento/>
+            <descricao>Indica se o registro esta ativo ou inativo, uma vez que nao havera delecao de registros em dados cadastrais. DOMiNIO: S - Sim (ativo) N - Nao (inativo)</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeTipoEmbalagemOficial" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>Tipo Embalagem Transporte</entidade>
+            <atributo>nome tipo embalagem</atributo>
+            <regrasMapeamento>Bind com o campo Codigo Tipo Embalagem do dominio Tipo Embalagem</regrasMapeamento>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NbmNcmEBO">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="nbm" minOccurs="0" type="NbmEBO"/>
+      <xs:element name="ncm" minOccurs="0" type="NcmEBO"/>
+      <xs:element name="flagTipo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>B se for nbm. C se for ncm</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaNbmNcmEBO">
+    <xs:sequence>
+      <xs:element name="nbmNcm" type="NbmNcmEBO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaTipoEmbalagemNcmEBO">
+    <xs:sequence>
+      <xs:element name="tipoEmbalagemNcm" maxOccurs="unbounded" minOccurs="0" type="TipoEmbalagemNcmEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TipoEmbalagemNcmEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>tipo embalagem nomenclatura comum mercosul mercadoria</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoTipoEmbalagem" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo embalagem</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeTipoEmbalagem" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>Tipo Embalagem Transporte</entidade>
+            <atributo>nome tipo embalagem</atributo>
+            <regrasMapeamento>Bind com o campo Codigo Tipo Embalagem do dominio Tipo Embalagem</regrasMapeamento>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+            <regrasMapeamento/>
+            <descricao>Indica se o registro esta ativo ou inativo, uma vez que nao havera delecao de registros em dados cadastrais. DOMiNIO: S - Sim (ativo) N - Nao (inativo)</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

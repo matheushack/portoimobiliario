@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions name="DocumentoEmissaoServiceV1_0" targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/documentoemissaoservice/v1_0" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.portoseguro.com.br/ramoselementares/emissao/documentoemissaoservice/v1_0" xmlns:WL5G3N2="http://www.porto.com/re/exception">
+  <WL5G3N0:import location="DocumentoEmissaoServiceTokenEBSV1_0_1_2.wsdl" namespace="http://www.porto.com/re/exception"/>
+  <WL5G3N0:types>
+    <xsd:schema xmlns:ns2="http://www.porto.com/re/exception" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.portoseguro.com.br/ramoselementares/emissao/documentoemissaoservice/v1_0" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://www.portoseguro.com.br/ramoselementares/emissao/documentoemissaoservice/v1_0">
+      <xsd:import namespace="http://www.portoseguro.com.br/ramoselementares/emissao/documentoemissaoservice/v1_0" schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2.xsd"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="buscarDocumentoEmissaoPorIdRequest">
+    <WL5G3N0:part element="WL5G3N1:buscarDocumentoEmissaoPorIdRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarDocumentoEmissaoPorIdResponse">
+    <WL5G3N0:part element="WL5G3N1:buscarDocumentoEmissaoPorIdResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarItemDocumentoEmissaoPorIdRequest">
+    <WL5G3N0:part element="WL5G3N1:buscarItemDocumentoEmissaoPorIdRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarItemDocumentoEmissaoPorIdResponse">
+    <WL5G3N0:part element="WL5G3N1:buscarItemDocumentoEmissaoPorIdResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorCartaRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorCartaRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorCartaResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorCartaResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorCategoriaEventoRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorCategoriaEventoRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorCategoriaEventoResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorCategoriaEventoResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorCategoriaGenericaRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorCategoriaGenericaRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorCategoriaGenericaResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorCategoriaGenericaResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorCategoriaLocalRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorCategoriaLocalRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorCategoriaLocalResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorCategoriaLocalResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorCorretorRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorCorretorRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorCorretorResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorCorretorResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorPeriodoPorIdSeguradoRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorIdSeguradoRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorPeriodoPorIdSeguradoResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorIdSeguradoResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorPeriodoPorNumeroApoliceRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorNumeroApoliceRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorPeriodoPorNumeroApoliceResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorNumeroApoliceResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorSeguradoRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorSeguradoRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorSeguradoResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorSeguradoResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarItensDocumentoEmissaoPorCoberturaRequest">
+    <WL5G3N0:part element="WL5G3N1:listarItensDocumentoEmissaoPorCoberturaRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarItensDocumentoEmissaoPorCoberturaResponse">
+    <WL5G3N0:part element="WL5G3N1:listarItensDocumentoEmissaoPorCoberturaResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarItensDocumentoEmissaoRequest">
+    <WL5G3N0:part element="WL5G3N1:listarItensDocumentoEmissaoRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarItensDocumentoEmissaoResponse">
+    <WL5G3N0:part element="WL5G3N1:listarItensDocumentoEmissaoResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorIdRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorIdRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorIdResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorIdResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorPeriodoPorCorretorRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorCorretorRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorPeriodoPorCorretorResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorCorretorResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscaDocumentoPorNumeroECorretorRequest">
+    <WL5G3N0:part element="WL5G3N1:buscaDocumentoPorNumeroECorretorRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscaDocumentoPorNumeroECorretorResponse">
+    <WL5G3N0:part element="WL5G3N1:buscaDocumentoPorNumeroECorretorResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarDocumentoEmissaoComplementarPorIdRequest">
+    <WL5G3N0:part element="WL5G3N1:buscarDocumentoEmissaoComplementarPorIdRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarDocumentoEmissaoComplementarPorIdResponse">
+    <WL5G3N0:part element="WL5G3N1:buscarDocumentoEmissaoComplementarPorIdResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorLicitacaoRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorLicitacaoRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorLicitacaoResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorLicitacaoResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorObjetoSimilarRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorObjetoSimilarRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoEmissaoPorObjetoSimilarResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoEmissaoPorObjetoSimilarResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoPorNumeroPessoaLocalRiscoRequest">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoPorNumeroPessoaLocalRiscoRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarDocumentoPorNumeroPessoaLocalRiscoResponse">
+    <WL5G3N0:part element="WL5G3N1:listarDocumentoPorNumeroPessoaLocalRiscoResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarBlocoCondominioRequest">
+    <WL5G3N0:part element="WL5G3N1:listarBlocoCondominioRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="listarBlocoCondominioResponse">
+    <WL5G3N0:part element="WL5G3N1:listarBlocoCondominioResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscaDocumentoPorInspecaoRequest">
+    <WL5G3N0:part element="WL5G3N1:buscaDocumentoPorInspecaoRequest" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscaDocumentoPorInspecaoResponse">
+    <WL5G3N0:part element="WL5G3N1:buscaDocumentoPorInspecaoResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="DocumentoEmissaoPortType">
+    <WL5G3N0:operation name="buscarDocumentoEmissaoPorId">
+      <WL5G3N0:input message="WL5G3N1:buscarDocumentoEmissaoPorIdRequest"/>
+      <WL5G3N0:output message="WL5G3N1:buscarDocumentoEmissaoPorIdResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="buscarItemDocumentoEmissaoPorId">
+      <WL5G3N0:input message="WL5G3N1:buscarItemDocumentoEmissaoPorIdRequest"/>
+      <WL5G3N0:output message="WL5G3N1:buscarItemDocumentoEmissaoPorIdResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorCarta">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorCartaRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorCartaResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorCategoriaEvento">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorCategoriaEventoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorCategoriaEventoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorCategoriaGenerica">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorCategoriaGenericaRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorCategoriaGenericaResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorCategoriaLocal">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorCategoriaLocalRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorCategoriaLocalResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorCorretor">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorCorretorRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorCorretorResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorPeriodoPorIdSegurado">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorIdSeguradoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorIdSeguradoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorPeriodoPorNumeroApolice">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorNumeroApoliceRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorNumeroApoliceResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorSegurado">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorSeguradoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorSeguradoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarItensDocumentoEmissaoPorCobertura">
+      <WL5G3N0:input message="WL5G3N1:listarItensDocumentoEmissaoPorCoberturaRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarItensDocumentoEmissaoPorCoberturaResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarItensDocumentoEmissao">
+      <WL5G3N0:input message="WL5G3N1:listarItensDocumentoEmissaoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarItensDocumentoEmissaoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorId">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorIdRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorIdResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorPeriodoPorCorretor">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorCorretorRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorPeriodoPorCorretorResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="buscaDocumentoPorNumeroECorretor">
+      <WL5G3N0:input message="WL5G3N1:buscaDocumentoPorNumeroECorretorRequest"/>
+      <WL5G3N0:output message="WL5G3N1:buscaDocumentoPorNumeroECorretorResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorLicitacao">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorLicitacaoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorLicitacaoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="buscarDocumentoEmissaoComplementarPorId">
+      <WL5G3N0:input message="WL5G3N1:buscarDocumentoEmissaoComplementarPorIdRequest"/>
+      <WL5G3N0:output message="WL5G3N1:buscarDocumentoEmissaoComplementarPorIdResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoEmissaoPorObjetoSimilar">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoEmissaoPorObjetoSimilarRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoEmissaoPorObjetoSimilarResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarDocumentoPorNumeroPessoaLocalRisco">
+      <WL5G3N0:input message="WL5G3N1:listarDocumentoPorNumeroPessoaLocalRiscoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarDocumentoPorNumeroPessoaLocalRiscoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="listarBlocoCondominio">
+      <WL5G3N0:input message="WL5G3N1:listarBlocoCondominioRequest"/>
+      <WL5G3N0:output message="WL5G3N1:listarBlocoCondominioResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="buscaDocumentoPorInspecao">
+      <WL5G3N0:input message="WL5G3N1:buscaDocumentoPorInspecaoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:buscaDocumentoPorInspecaoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+</WL5G3N0:definitions>

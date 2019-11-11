@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/admin/localorigemdestinoebo/v1" elementFormDefault="qualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/admin/localorigemdestinoebo/v1">
+  <xs:complexType name="ListaLocalOrigemDestinoEBO">
+    <xs:sequence>
+      <xs:element name="local" maxOccurs="unbounded" minOccurs="0" type="LocalOrigemDestinoEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LocalOrigemDestinoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao/>
+        <entidade>local origem destino transporte</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoLocalOrigemDestinoTransporte" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo local origem destino transporte</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeLocalOrigemDestinoTransporte" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>nome local origem destino transporte</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoPais" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo pais</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoUnidadeFederacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo unidade federacao</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeSubdivisaoPais" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>nome subdivisao pais</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+            <regrasMapeamento/>
+            <descricao>Indica se o registro esta ativo ou inativo, uma vez que
+							nao havera delecao de registros em dados cadastrais. DOMiNIO: S -
+							Sim (ativo) N - Nao (inativo)</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaLocalEmpresa" minOccurs="0" type="ListaLocalEmpresaEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaLocalEmpresaEBO">
+    <xs:sequence>
+      <xs:element name="localEmpresa" maxOccurs="unbounded" minOccurs="0" type="LocalEmpresaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LocalEmpresaEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao/>
+        <entidade>local origem destino transporte empresa</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoEmpresa" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Empresa</atributo>
+            <regrasMapeamento/>
+            <descricao>E o codigo da empresa.</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+            <regrasMapeamento/>
+            <descricao>Indica se o registro esta ativo ou inativo, uma vez que
+							nao havera delecao de registros em dados cadastrais. DOMiNIO: S -
+							Sim (ativo) N - Nao (inativo)</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/administrativo/moedaebo/v1" version="1.0" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/administrativo/moedaebo/v1">
+  <xs:complexType name="MoedaEBO">
+    <xs:sequence>
+      <xs:element name="codigoMoeda" type="xs:string" minOccurs="0"/>
+      <xs:element name="nomeMoeda" type="xs:string" minOccurs="0"/>
+      <xs:element name="siglaMoeda" type="xs:string" minOccurs="0"/>
+      <xs:element name="flagAtivo" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

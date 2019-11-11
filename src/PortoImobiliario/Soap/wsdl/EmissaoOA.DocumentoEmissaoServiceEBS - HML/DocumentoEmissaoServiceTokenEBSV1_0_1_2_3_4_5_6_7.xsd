@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/questionarioemissaoebo/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:qem="http://www.portoseguro.com.br/ramoselementares/emissao/questionarioemissaoebo/v1">
+  <complexType name="RespostaQuestionarioEBO">
+    <sequence>
+      <element name="codigoQuestionario" minOccurs="0" type="integer"/>
+      <element name="numeroVersaoQuestionario" minOccurs="0" type="long"/>
+      <element name="codigoQuestao" minOccurs="0" type="integer"/>
+      <element name="codigoTipoQuestao" minOccurs="0" type="integer"/>
+      <element name="codigoResposta" minOccurs="0" type="integer"/>
+      <element name="dataResposta" minOccurs="0" type="date"/>
+      <element name="textoResposta" minOccurs="0" type="string"/>
+      <!--20160126 - Ajustes nos canonico-->
+      <element name="codigoTipoAtualizacao" minOccurs="0" type="integer"/>
+      <element name="respostasListaQuestionario" maxOccurs="1" minOccurs="0" type="qem:ListaRespostaQuestionarioEBO"/>
+    </sequence>
+  </complexType>
+  <complexType name="RespostaListaItemEBO">
+    <sequence>
+      <element name="codigoListaItem" minOccurs="0" type="integer"/>
+      <element name="ComponenteListaItem" minOccurs="0" type="qem:ListaComponenteListaItemEBO"/>
+      <element name="codigoItem" minOccurs="0" type="long"/>
+      <element name="dataResposta" minOccurs="0" type="date"/>
+      <element name="textoResposta" minOccurs="0" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="ListaRespostaQuestionarioEBO">
+    <sequence>
+      <element name="respostaListaItem" minOccurs="0" maxOccurs="unbounded" type="qem:RespostaListaItemEBO"/>
+    </sequence>
+  </complexType>
+  <complexType name="ListaComponenteListaItemEBO">
+    <sequence>
+      <element name="listaComponenteListaItem" minOccurs="0" maxOccurs="unbounded" type="qem:ComponenteListaItemEBO"/>
+    </sequence>
+  </complexType>
+  <complexType name="ComponenteListaItemEBO">
+    <sequence>
+      <element name="codigoComponenteListaItem" minOccurs="0" type="integer"/>
+      <element name="codigoListaValor" minOccurs="0" type="integer"/>
+      <element name="codigoMascaraQuestao" minOccurs="0" type="integer"/>
+      <element name="codigoTipoQuestao" minOccurs="0" type="integer"/>
+      <element name="flagAtivo" minOccurs="0" type="integer"/>
+      <element name="textoComentario" minOccurs="0" type="integer"/>
+    </sequence>
+  </complexType>
+</schema>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/pessoa/pessoaebo/v1" elementFormDefault="qualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/pessoa/pessoaebo/v1" xmlns:end="http://www.portoseguro.com.br/ramoselementares/pessoa/enderecoebo/v1">
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11_12.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/pessoa/enderecoebo/v1"/>
+  <xs:complexType name="PessoaEBO">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoPessoa" type="xs:long" minOccurs="0"/>
+      <xs:element name="codigoTipoPessoa" minOccurs="0" type="xs:integer"/>
+      <xs:element name="numeroCnpjCpf" minOccurs="0" type="xs:long"/>
+      <xs:element name="nomePessoa" minOccurs="0" type="xs:string"/>
+      <xs:element name="nomeResumidoPessoa" minOccurs="0" type="xs:string"/>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string"/>
+      <xs:element name="pessoaFisica" type="PessoaFisicaEBO" minOccurs="0"/>
+      <xs:element name="pessoaJuridica" minOccurs="0" type="PessoaJuridicaEBO"/>
+      <xs:element name="documentos" minOccurs="0" type="ListaDocumentosEBO"/>
+      <xs:element name="enderecosPessoa" minOccurs="0" type="end:ListaEnderecosEBO"/>
+      <xs:element name="contatos" minOccurs="0" type="ListaContatosEBO"/>
+      <xs:element name="vinculos" minOccurs="0" type="ListaVinculosEBO"/>
+      <xs:element name="auditoria" type="AuditoriaEBO" minOccurs="0"/>
+      <xs:element name="flagEmbarcador" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>pessoa seguro</entidade>
+            <atributo>flag embarcador</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagTransportador" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>pessoa seguro</entidade>
+            <atributo>flag transportador</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuditoriaEBO">
+    <xs:sequence>
+      <xs:element name="dataUltimaAlteracao" minOccurs="0" type="xs:dateTime"/>
+      <xs:element name="codigoTipoUsuarioUltimaAlteracao" minOccurs="0" type="xs:string"/>
+      <xs:element name="codigoEmpresaUsuarioUltimaAlteracao" minOccurs="0" type="xs:string"/>
+      <xs:element name="codigoMatriculaUsuarioUltimaAlteracao" minOccurs="0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DocumentoEBO">
+    <xs:sequence>
+      <xs:element name="codigoDocumentoPessoa" minOccurs="0" type="xs:integer"/>
+      <xs:element name="codigoTipoDocumentoPessoa" minOccurs="0" maxOccurs="1" type="xs:integer"/>
+      <xs:element name="numeroDocumento" minOccurs="0" type="xs:string"/>
+      <xs:element name="dataEmissaoDocumento" minOccurs="0" type="xs:date"/>
+      <xs:element name="dataValidade" minOccurs="0" type="xs:date"/>
+      <xs:element name="nomeOrgaoExpedidor" minOccurs="0" type="xs:string"/>
+      <xs:element name="codigoUnidadeFederacao" minOccurs="0" type="xs:integer"/>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VinculoEBO">
+    <xs:sequence>
+      <xs:element name="codigoVinculoPessoa" minOccurs="0" type="xs:integer"/>
+      <xs:element name="codigoTipoVinculo" minOccurs="0" type="xs:integer"/>
+      <xs:element name="codigoPessoaVinculo" minOccurs="0" type="xs:integer"/>
+      <xs:element name="codigoTipoPessoaVinculo" minOccurs="0" type="xs:integer"/>
+      <xs:element name="numeroCnpjCpfPessoaVinculo" minOccurs="0" type="xs:integer"/>
+      <xs:element name="nomePessoaVinculo" minOccurs="0" type="xs:string"/>
+      <xs:element name="flagVinculoPessoaExpostaPoliticamente" minOccurs="0" type="xs:string"/>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ContatoEBO">
+    <xs:sequence>
+      <xs:element name="codigoContatoPessoa" minOccurs="0" type="xs:integer"/>
+      <xs:element name="codigoTipoContato" minOccurs="0" type="xs:integer"/>
+      <xs:element name="numeroDdi" minOccurs="0" type="xs:integer"/>
+      <xs:element name="numeroDdd" minOccurs="0" type="xs:integer"/>
+      <xs:element name="numeroContato" minOccurs="0" type="xs:long"/>
+      <xs:element name="numeroRamal" minOccurs="0" type="xs:integer"/>
+      <xs:element name="textoContato" minOccurs="0" type="xs:string"/>
+      <xs:element name="flagPrincipal" minOccurs="0" type="xs:string"/>
+      <xs:element name="textoComentario" minOccurs="0" type="xs:string"/>
+      <xs:element name="flagAutorizacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Para utilizacao do Sinistro</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PessoaFisicaEBO">
+    <xs:sequence>
+      <xs:element name="codigoEstadoCivil" type="xs:integer" minOccurs="0"/>
+      <xs:element name="codigoFaixaRenda" type="xs:integer" minOccurs="0"/>
+      <xs:element name="codigoNacionalidade" type="xs:integer" minOccurs="0"/>
+      <xs:element name="codigoOcupacao" type="xs:integer" minOccurs="0"/>
+      <xs:element name="codigoSexoPessoa" type="xs:integer" minOccurs="0"/>
+      <xs:element name="codigoTipoExposicaoPessoa" type="xs:integer" minOccurs="0"/>
+      <xs:element name="dataNascimento" type="xs:date" minOccurs="0"/>
+      <xs:element name="codigoPais" type="xs:integer" minOccurs="0"/>
+      <xs:element name="nomeCargo" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <descricao>Campo utilizado para identificar o cargo da pessoa utilizado no Sinistro</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PessoaJuridicaEBO">
+    <xs:sequence>
+      <xs:element name="codigoAtividadeEconomica" minOccurs="0" type="xs:integer"/>
+      <xs:element name="codigoFaixaReceitaOperacionalAno" minOccurs="0" type="xs:integer"/>
+      <xs:element name="codigoFaixaPatrimonioLiquido" minOccurs="0" type="xs:integer"/>
+      <xs:element name="codigoNaturezaJuridica" minOccurs="0" type="xs:integer"/>
+      <xs:element name="flagCongenere" minOccurs="0" type="xs:string"/>
+      <xs:element name="codigoSusepCongenere" minOccurs="0" type="xs:string"/>
+      <xs:element name="dataRegistroAbertura" minOccurs="0" type="xs:date"/>
+      <xs:element name="flagOrgaoSubvencao" minOccurs="0" type="xs:string"/>
+      <xs:element name="nomeRamoAtividade" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <descricao>Campo utilizado para identificar o ramo de atividade da empresa, utilizado no Sinistro</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaVinculosEBO">
+    <xs:sequence>
+      <xs:element name="vinculo" type="VinculoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaContatosEBO">
+    <xs:sequence>
+      <xs:element name="contato" type="ContatoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaDocumentosEBO">
+    <xs:sequence>
+      <xs:element name="documento" type="DocumentoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaPessoasEBO">
+    <xs:sequence>
+      <xs:element name="pessoa" type="PessoaEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

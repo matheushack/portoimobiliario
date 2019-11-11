@@ -1,0 +1,2249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/documentoemissaoebo/v1" elementFormDefault="qualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/emissao/documentoemissaoebo/v1" xmlns:pes="http://www.portoseguro.com.br/ramoselementares/pessoa/pessoaebo/v1" xmlns:cem="http://www.portoseguro.com.br/ramoselementares/emissao/criticaemissaoebo/v1" xmlns:cle="http://www.portoseguro.com.br/ramoselementares/emissao/clausulaemissaoebo/v1" xmlns:qem="http://www.portoseguro.com.br/ramoselementares/emissao/questionarioemissaoebo/v1" xmlns:dae="http://www.portoseguro.com.br/ramoselementares/emissao/descontoagravoemissaoebo/v1" xmlns:aem="http://www.portoseguro.com.br/ramoselementares/emissao/analiseemissaoebo/v1" xmlns:ide="http://www.portoseguro.com.br/ramoselementares/emissao/itemdocumentoemissaoebo/v1" xmlns:ori="http://www.portoseguro.com.br/ramoselementares/emissao/descontoagravoorigemdestinoebo/v1" xmlns:end="http://www.portoseguro.com.br/ramoselementares/pessoa/enderecoebo/v1" xmlns:das="http://www.portoseguro.com.br/ramoselementares/emissao/documentoassociadoebo/v1">
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/emissao/descontoagravoorigemdestinoebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/emissao/criticaemissaoebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/emissao/clausulaemissaoebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/emissao/questionarioemissaoebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/emissao/descontoagravoemissaoebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/emissao/analiseemissaoebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/emissao/itemdocumentoemissaoebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/pessoa/pessoaebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11_12.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/pessoa/enderecoebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19_20_21.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/emissao/documentoassociadoebo/v1"/>
+  <xs:complexType name="DocumentoEmissaoEBO">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <!--elementos Apolice-->
+      <xs:element name="numeroApolice" minOccurs="0" type="xs:positiveInteger">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>numero apolice</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoSucursal" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>codigo sucursal</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroSequenciaApolice" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>numero sequencia apolice</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="digitoVerificacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>digito verificacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroEndosso" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>numero endosso</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroApoliceSemNumeroEndosso" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>numero apolice sem numero endosso</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroApoliceExterno" minOccurs="0" type="xs:positiveInteger">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>numero apolice externo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroApoliceAnterior" minOccurs="0" type="xs:positiveInteger">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Em momento de orcamento e proposta usarcampo da tabela da versao do orcamento</comportamentoDoServico>
+            <regrasMapeamento>Em momento de orcamento e proposta usarcampo da tabela da versao do orcamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataEnvioEmail" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>data envio email</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataEnvioImpressao" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>data envio impressao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoIdentificacaoApolice" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>codigo identificacao apolice</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoIdentificacaoCondicaoGeral" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>codigo identificacao condicao geral</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--20160126 - Ajustes nos canonico-->
+      <xs:element name="numeroSequenciaApoliceAnterior" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Em momento de orcamento e proposta usarcampo da tabela da versao do orcamento</comportamentoDoServico>
+            <regrasMapeamento>Em momento de orcamento e proposta usarcampo da tabela da versao do orcamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoEndossoOrgaoRegulador" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>codigo tipo endosso orgao regulador</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoEnquadramentoRenovacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>codigo tipo enquadramento renovacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="quantidadeAnoRenovacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>quantidade ano renovacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoStatusApolice" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>status apolice apolice</entidade>
+            <atributo>codigo status apolice</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataInicioStatusApolice" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>status apolice apolice</entidade>
+            <atributo>data inicio status apolice</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimStatusApolice" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>status apolice apolice</entidade>
+            <atributo>data fim status apolice</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--20160202 - Elemento adicionado para atender status da apolice para consulta do modulo de sinistro-->
+      <xs:element name="descricaoStatusApoliceCalculado" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Campo utilizado para informar o status daapolice para consulta do modulo do sinistro</comportamentoDoServico>
+            <regrasMapeamento>Campo utilizado para informar o status daapolice para consulta do modulo do sinistro</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--elementos Proposta-->
+      <xs:element name="numeroProposta" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>proposta</entidade>
+            <atributo>numero proposta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroVersaoProposta" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>numero versao proposta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroSequenciaProposta" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>proposta</entidade>
+            <atributo>numero sequencia proposta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoOrigemEmissao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>proposta</entidade>
+            <atributo>codigo origem emissao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoDistribuicaoPagamento" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>codigo tipo distribuicao pagamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="enderecoCorrespondencia" minOccurs="0" type="end:EnderecoEBO"/>
+      <xs:element name="dataProtocolo" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>data protocolo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataEmissao" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>data emissao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroPropostaAutomovel" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>numero proposta automovel</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagPossuiCorretorSecundario" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>flag possui corretor secundario</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagPossuiBeneficiario" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>flag possui beneficiario</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagPossuiSinistro" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>flag possui sinistro</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagEnvioEmailCorretor" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>flag envio email corretor</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagPossuiTituloCapitalizacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>flag possui titulo capitalizacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--ERIK ROCHA - campo de numero sorte titulo capitalizacao removido para atender a analise de impacto do modelo de dados 20160624-->
+      <xs:element name="dataInicioVigencia" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>data inicio vigencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimVigencia" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>data fim vigencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoStatusProposta" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>status versao proposta</entidade>
+            <atributo>codigo status proposta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataInicioStatusProposta" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>status versao proposta</entidade>
+            <atributo>data inicio status proposta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimStatusProposta" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>status versao proposta</entidade>
+            <atributo>data fim status proposta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--20160126 - Ajustes nos canonico-->
+      <xs:element name="flagEndossoAlteracaoDadoCadastralSegurado" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>flag endosso alteracao dado cadastral segurado</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--elementos orcamento-->
+      <xs:element name="numeroOrcamento" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>numero orcamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroVersaoOrcamento" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>numero versao orcamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroOrcamentoExterno" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>numero orcamento externo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagDataCalculoManual" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag data calculo manual</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagImpressaoOperacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag impressao operacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagLicitacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag licitacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--adicionado para gerir cancelamentos-->
+      <xs:element name="codigoMotivoEndossoCancelamento" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo motivo endosso cancelamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoOferta" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>codigo oferta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroVersaoOferta" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>numero versao oferta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroSequenciaVersaoOferta" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>numero sequencia versao oferta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoEmpresa" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>codigo empresa</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoRamo" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>codigo ramo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoModalidade" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>codigo modalidade</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoGrupoComercial" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>codigo grupo comercial</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroVersaoProdutoComercial" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>numero versao produto comercial</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroSequenciaVersaoProdutoComercial" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>numero sequencia versao produto comercial</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeOferta" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>nome oferta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeProdutoComercial" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>nome produto comercial</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagSimulacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>orcamento</entidade>
+            <atributo>flag simulacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoStatusOrcamento" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>status versao orcamento</entidade>
+            <atributo>codigo status orcamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataInicioStatusOrcamento" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>status versao orcamento</entidade>
+            <atributo>data inicio status orcamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimStatusOrcamento" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>status versao orcamento</entidade>
+            <atributo>data fim status orcamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroApoliceEndosso" minOccurs="0" type="xs:positiveInteger">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>numero apolice endosso</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--segurado(proponente)-->
+      <xs:element name="dadosPessoaSegurado" minOccurs="0" type="pes:PessoaEBO"/>
+      <xs:element name="nomePessoaProponente" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>nome pessoa proponente</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataNascimentoPessoaProponente" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>data nascimento pessoa proponente</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroCalculoCnpjCpfProponente" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>numero calculo cnpj cpf proponente</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCorretorPrincipal" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo corretor principal</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataCalculo" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>data calculo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataValidade" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>data validade</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataMelhorDataPrimeiraParcela" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>data melhor data primeira parcela</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataInicioVigenciaSeguro" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>data inicio vigencia seguro</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimVigenciaSeguro" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>data fim vigencia seguro</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoParceiroNegocio" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo parceiro negocio</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroVersaoParceiroNegocio" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>numero versao parceiro negocio</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoOnus" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo onus</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Erik Rocha - type alterado para atender aumento number de 5 para 15 - conforme analise de impacto 20160527-->
+      <xs:element name="codigoFormaPagamento" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo forma pagamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoClasseProfissionalLiberal" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo classe profissional liberal</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCanal" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo canal</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoMoeda" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo moeda</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoMotivoRecusa" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo motivo recusa</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoDocumento" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Campo para informa o tipo de retorno(Orcamento, proposta ou apolice)</comportamentoDoServico>
+            <regrasMapeamento>Campo para informa o tipo de retorno(Orcamento, proposta ou apolice)</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoCalculo" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo tipo calculo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoClassificacaoPessoa" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo tipo classificacao pessoa</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoEndosso" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo tipo endosso</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoSeguro" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo tipo seguro</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoRenovacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo tipo renovacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroProcessoLicitacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>numero processo licitacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoLicitacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo tipo licitacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoOrigemRenovacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo origem renovacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoOperacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo operacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataInicioVigenciaVersaoOrcamento" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>data inicio vigencia versao orcamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimVigenciaVersaoOrcamento" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>data fim vigencia versao orcamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorAdicionalFracionamento" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>valor adicional fracionamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorCustoApolice" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>valor custo apolice</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorEncargo" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>valor encargo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorPremio" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Campo para informa o valor total (calculadopelo BE)</comportamentoDoServico>
+            <regrasMapeamento>Campo para informa o valor total (calculadopelo BE)</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="textoComentario" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>texto comentario</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoClassificacaoCreditoPessoa" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo classificacao credito pessoa</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="quantidadeDiaVigenciaSeguro" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>quantidade dia vigencia seguro</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--20160126 - Ajustes nos canonico-->
+      <xs:element name="flagEndossoTrocaSegurado" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag endosso troca segurado</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataInicioVigenciaApoliceAnterior" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>data inicio vigencia apolice anterior</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimVigenciaApoliceAnterior" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>data fim vigencia apolice anterior</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeProcessoSistemaGerenciamentoProcesso" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Em momento de orcamento usar campo da tabelada versao do orcamento</comportamentoDoServico>
+            <regrasMapeamento>Em momento de orcamento usar campo da tabelada versao do orcamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagBloqueio" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Em momento de orcamento usar campo da tabelada versao do orcamento</comportamentoDoServico>
+            <regrasMapeamento>Em momento de orcamento usar campo da tabelada versao do orcamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataBloqueio" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Em momento de orcamento usar campo da tabelada versao do orcamento</comportamentoDoServico>
+            <regrasMapeamento>Em momento de orcamento usar campo da tabelada versao do orcamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoUsuarioBloqueio" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Em momento de orcamento usar campo da tabelada versao do orcamento</comportamentoDoServico>
+            <regrasMapeamento>Em momento de orcamento usar campo da tabelada versao do orcamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoEmpresaUsuarioBloqueio" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Em momento de orcamento usar campo da tabelada versao do orcamento</comportamentoDoServico>
+            <regrasMapeamento>Em momento de orcamento usar campo da tabelada versao do orcamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoMatriculaUsuarioBloqueio" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <comportamentoDoServico>Em momento de orcamento usar campo da tabelada versao do orcamento</comportamentoDoServico>
+            <regrasMapeamento>Em momento de orcamento usar campo da tabelada versao do orcamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="historicoEndosso" minOccurs="0" type="ListaHistoricoEndossoEBO"/>
+      <xs:element name="pagadores" minOccurs="0" type="ListaPagadoresEBO"/>
+      <xs:element name="analises" minOccurs="0" type="ListaAnalisesEBO"/>
+      <xs:element name="corretores" minOccurs="0" type="ListaCorretoresEBO"/>
+      <xs:element name="intervenientes" minOccurs="0" type="ListaIntervenientesEBO"/>
+      <xs:element name="pendencias" minOccurs="0" type="ListaPendenciasEBO"/>
+      <xs:element name="clausulas" minOccurs="0" type="ListaClausulasEBO"/>
+      <xs:element name="beneficios" minOccurs="0" type="ListaBeneficiosEBO"/>
+      <xs:element name="formasPagamento" minOccurs="0" type="ListaFormaPagamentoEBO"/>
+      <xs:element name="criticas" minOccurs="0" type="ListaCriticasEBO"/>
+      <xs:element name="respostasQuestionario" minOccurs="0" type="ListaRespostaQuestionariosEBO"/>
+      <xs:element name="descontosAgravo" minOccurs="0" type="ListaDescontosAgravosEBO"/>
+      <xs:element name="auditoria" minOccurs="0" type="AuditoriaEBO"/>
+      <xs:element name="ItensDocumentoEmissao" minOccurs="0" type="ListaItemDocumentoEmissaoEBO"/>
+      <xs:element name="flagSolicitacaoTransferenciaCorretagem" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>Apolice</entidade>
+            <atributo>Flag Solicitacao Transferencia Corretagem</atributo>
+            <regrasMapeamento>Este campo deverá ser preenchido de acordocom a regra de negocio GE.RN.117</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="solicitacaoTransferenciaCorretagem" minOccurs="0" type="SolicitacaoTransferenciaCorretagemEBO"/>
+      <xs:element name="flagOfertaCartaoCredito" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag oferta cartao credito</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoBandeiraCartao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo bandeira cartao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagVerbaTotal" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag verba total</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="solicitacaoCartaoCredito" minOccurs="0" type="SolicitacaoCartaoCreditoEBO"/>
+      <!--Henrique.Faria - 2016-08-08 - Campo inserido na revisão dos layouts do ILOG-->
+      <xs:element name="flagAnaliseTecnicaDiferenciada" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag analise tecnica diferenciada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--eduardo.rosell - 2016-08-10 - Campos inseridos para atender ao modelo de dados-->
+      <xs:element name="numeroSequenciaRegistroTituloCapitalizacao" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>numero sequencia registro titulo capitalizacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--eduardo.rosell - 2016-08-11 - Remoção dos campos flagRenovacaoAutomatico e flagSolicitacaoCartaoCredito-->
+      <!--eduardo.rosell - 2016-08-16 - Inclusão do campo de flagSolicitacaoCartaoCredito-->
+      <xs:element name="flagSolicitacaoCartaoCredito" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>flag solicitacao cartao credito</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--eduardo.rosell 2016-08-17 inclusão do campo codigo faixa resgate ponto-->
+      <xs:element name="codigoFaixaResgatePonto" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>faixa resgate ponto cartao credito versao orcamento</entidade>
+            <atributo>codigo faixa resgate ponto</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Erik Rocha - campos adicionados conforme analise de impacto de mudanças retroativas em Emissao (v8_2_0)-->
+      <xs:element name="codigoTipoDestinario" minOccurs="0" type="xs:short">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>codigo tipo destinatario</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoPessoaProponente" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo tipo pessoa proponente</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--eduardo.rosell - 2016-10-03 - Inclusão dos campos de codigoPrazoAverbacao em versao orcamento e versao proposta-->
+      <xs:element name="codigoPrazoAverbacaoAdendo" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo prazo averbacao adendo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoPrazoAverbacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>codigo prazo averbacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Campos inseridos para atender ao Transportes e ao Faturamento Transportes-->
+      <xs:element name="descontosAgravoOrigemDestino" minOccurs="0" type="ori:ListaDescontosAgravosOrigemDestinoEBO"/>
+      <xs:element name="valorPremioMinimo" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>valor premio minimo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorPremioDepositoInicial" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>valor premio deposito inicial</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagEndossoCancelado" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade/>
+            <atributo/>
+            <regrasMapeamento>Utilizado apenas no Faturamento Transportes</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--eduardo.rosell - 2016-10-13 - Inclusão dos campos de flagCobrancaPremioDepositoInicialAdendo em versao orcamento-->
+      <xs:element name="flagCobrancaPremioDeposito" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag cobranca premio deposito inicial adendo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--eduardo.rosell - 2016-10-15 - Inclusão do campo de valorAjustePremioMinimo em versao orcamento-->
+      <xs:element name="valorAjustePremioMinimo" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>valor ajuste premio minimo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--eduardo.rosell - 2016-10-17 - Inclusão do campo de flagLimiteMaximoIndenizacaoUnico em versao orcamento-->
+      <xs:element name="flagLimiteMaximoIndenizacaoUnico" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>Flag Limite Maximo Indenizacao Unico</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroApoliceAssociado" type="xs:positiveInteger" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>numero apolice associado</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroOrcamentoAssociado" type="xs:positiveInteger" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>numero orcamento associado</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroVersaoOrcamentoAssociado" type="xs:positiveInteger" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>numero versao orcamento associado</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataProtocoloImpressao" minOccurs="0" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>data protocolo impressao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--SM 719-->
+      <xs:element name="valorDescontoItem" type="xs:decimal" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Soma do campo valor desconto de todos os itens da "cobertura item versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorAgravoItem" type="xs:decimal" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Soma do campo valor agravo de todos os documentos da "cobertura item versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Henrique.Faria - 2016-10-18 - Inclusao de campos para integracao com o ILOG - Transportes-->
+      <xs:element name="codigoFrequenciaFaturamento" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>codigo frequencia faturamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagCobrancaJuro" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao proposta</entidade>
+            <atributo>flag cobranca juro</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagEndossoRetroativo" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag endosso retroativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagPossuiMercadoriaExcecao" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Campo retornado conforme regra de negocio EE.RN.021 da DRN.03.20.026</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Inclusão de flag possui averbacao e flag possui embarcador - eduardo.rosell - 10112016-->
+      <xs:element name="flagPossuiAverbacao" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag possui averbacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagPossuiEmbarcador" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag possui embarcador</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="diasVenciamento" minOccurs="0" type="DiasVencimento"/>
+      <!--Campo de codigo status renovacao incluido para a SM 761 - eduardo.rosell - 29032017-->
+      <xs:element name="codigoStatusRenovacao" type="xs:long" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Campo para indicar o status da renovacao do documento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="documentoAssociado" minOccurs="0" type="das:DocumentoAssociadoEBO"/>
+      <!--Inclusao dos campos de flag vinculo seguro auto e outro negocio - SM 393 - eduardo.rosell - 06062017-->
+      <xs:element name="flagVinculoSeguroAuto" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag vinculo seguro auto</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagVinculoSeguroOutroNegocio" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag vinculo seguro outro negocio</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="quantidadeSeguroOutroNegocio" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>quantidade seguro outro negocio</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeResumidoOperacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>operacao</entidade>
+            <atributo>nome resumido operacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Inclusao dos campos de codigoSucursalProtocolo e codigoSetorProtocolo - 17082017 - SM 760-->
+      <xs:element name="codigoSucursalProtocolo" minOccurs="0" type="xs:integer"/>
+      <xs:element name="codigoSetorProtocolo" minOccurs="0" type="xs:integer"/>
+      <xs:element name="codigoDevolutivaOfertaCartao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>codigo devolutiva oferta cartao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Inclusao do campo de flag edicao bloqueio corretor SM 1000 - 20171221 - eduardo.rosell-->
+      <xs:element name="flagBloqueioEdicaoCorretor" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>versao orcamento</entidade>
+            <atributo>flag bloqueio edicao corretor</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoIdentificacaoExternaApolice" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>apolice</entidade>
+            <atributo>codigo identificacao externa apolice</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PagadorEBO">
+    <xs:sequence>
+      <xs:element name="dadosPessoaPagador" minOccurs="0" type="pes:PessoaEBO"/>
+      <xs:element name="enderecoCobranca" minOccurs="0" type="end:EnderecoEBO"/>
+      <xs:element name="pagadoresParcela" minOccurs="0" type="ListaPagadorParcelaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PagadorParcelaEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>pagador parcela versao proposta</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="dadosPessoaPagadorParcela" type="pes:PessoaEBO"/>
+      <xs:element name="numeroParcela" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero parcela</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataVencimento" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data vencimento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoCartao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo cartao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoIdentificacaoCartao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo identificacao cartao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoBanco" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo banco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroAgenciaBancaria" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero agencia bancaria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroContaBancaria" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero conta bancaria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="digitoContaBancaria" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>digito conta bancaria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorParcela" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>valor parcela</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--20160126 - Ajustes nos canonico-->
+      <xs:element name="dataPagamento" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data pagamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataPagamentoContabilizado" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data pagamento contabilizado</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataCancelamento" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data cancelamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoStatusParcela" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo status parcela</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagBloqueio" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag bloqueio</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataPrazoCobertura" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data prazo cobertura</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="hitoricoPagadorParcela" type="ListaHistoricoPagadorParcelaEndossoEBO"/>
+      <!--SM 279-->
+      <xs:element name="textoComentario" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>texto comentario</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CorretorEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>corretor versao proposta</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoCorretor" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo corretor</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoSucursal" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo sucursal</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagPrincipal" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag principal</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualParticipacao" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>percentual participacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorComissao" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>valor comissao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag ativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagImpressaoCorretor" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag impressao corretor</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BeneficioEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>beneficio versao orcamento</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoBeneficio" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo beneficio</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagativo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag ativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FormaPagamentoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade/>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <!--Erik Rocha - type alterado para atender aumento number de 5 para 15 - conforme analise de impacto 20160527-->
+      <xs:element name="codigoFormaPagamento" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento versao orcamento</entidade>
+            <atributo>codigo forma pagamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorPrimeiraParcela" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento versao orcamento</entidade>
+            <atributo>valor primeira parcela</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorDemaisParcela" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento versao orcamento</entidade>
+            <atributo>valor demais parcela</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorImpostoOperacaoFinanceira" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento versao orcamento</entidade>
+            <atributo>valor imposto operacao financeira</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorAdicionalFracionamento" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento versao orcamento</entidade>
+            <atributo>valor adicional fracionamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorEncargo" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento versao orcamento</entidade>
+            <atributo>valor encargo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorPremioCobertura" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento versao orcamento</entidade>
+            <atributo>valor premio cobertura</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorPremioClausula" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento versao orcamento</entidade>
+            <atributo>valor premio clausula</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorPremioServico" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento versao orcamento</entidade>
+            <atributo>valor premio servico</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagImpressaoFormaPagamento" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento versao orcamento</entidade>
+            <atributo>flag impressao forma pagamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoMeioPagamentoPrimeiraParcela" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento</entidade>
+            <atributo>codigo meio pagamento primeira parcela</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoMeioPagamentoDemaisParcela" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento</entidade>
+            <atributo>codigo meio pagamento demais parcela</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeResumidoFormaPagamento" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento</entidade>
+            <atributo>nome resumido forma pagamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeFormaPagamento" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento</entidade>
+            <atributo>nome forma pagamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="quantidadeParcela" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento</entidade>
+            <atributo>quantidade parcela</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento</entidade>
+            <atributo>flag ativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="textoComentario" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento</entidade>
+            <atributo>texto comentario</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Inclusao dos campos valor premio subvencao estadual agronegocio e soma valor premio subvencao federal agronegocio - eduardo.rosell - 21012017-->
+      <xs:element name="valorPremioSubvencaoEstadualAgronegocio" type="xs:decimal" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento</entidade>
+            <atributo>valor premio subvencao estadual agronegocio</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorPremioSubvencaoFederalAgronegocio" type="xs:decimal" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>forma pagamento</entidade>
+            <atributo>valor premio subvencao federal agronegocio</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroOrdemExibicao" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapear conforme cadastro de Plano de Parcelamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IntervenienteEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>interveniente versao proposta</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoInterveniente" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo interveniente</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoInterveniente" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo interveniente</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dadosPessoaInterveniente" minOccurs="0" type="pes:PessoaEBO"/>
+      <xs:element name="codigoTipoPessoa" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo pessoa</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroCnpjCpf" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero cnpj cpf</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeInterveniente" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>nome interveniente</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoExposicaoPessoa" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo exposicao pessoa</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoMotivoAusenciaCnpjCpf" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo motivo ausencia cnpj cpf</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualParticipacao" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>percentual participacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag ativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="exposicoes" minOccurs="0" type="ListaExposicoesEBO"/>
+      <!--20160126 - Ajustes nos canonico-->
+      <xs:element name="codigoTipoAtualizacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo atualizacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PendenciaEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>pendencia versao proposta</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoPendencia" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo pendencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroSequenciaPendencia" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero sequencia pendencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoStatusPendencia" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo status pendencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoDevolutiva" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo devolutiva</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCorretor" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo corretor</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="textoPendencia" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>texto pendencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataRegistroAbertura" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data registro abertura</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaRespostasPendencia" minOccurs="0" type="ListaRespostaPendenciaEBO"/>
+      <xs:element name="auditoria" type="AuditoriaEBO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RespostaPendenciaEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>resposta pendencia versao proposta</entidade>
+        <atributo/>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="numeroSequenciaRespostaPendencia" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero sequencia resposta pendencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCorretor" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo corretor</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataResposta" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data resposta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="textoRespostaPendencia" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>texto resposta pendencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagPossuiAnexo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag possui anexo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoIdentificacaoDocumento" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo identificacao documento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="auditoria" type="AuditoriaEBO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AuditoriaEBO">
+    <xs:sequence>
+      <xs:element name="dataUltimaAlteracao" minOccurs="0" type="xs:dateTime"/>
+      <xs:element name="codigoTipoUsuarioUltimaAlteracao" minOccurs="0" type="xs:string"/>
+      <xs:element name="codigoEmpresaUsuarioUltimaAlteracao" minOccurs="0" type="xs:string"/>
+      <xs:element name="codigoMatriculaUsuarioUltimaAlteracao" minOccurs="0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExposicaoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>exposicao interveniente versao proposta</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoExposicaoInterveniente" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo exposicao interveniente</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoVinculo" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo vinculo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoPessoaExposto" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo pessoa exposto</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoPessoaExposto" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo pessoa exposto</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroCnpjCpfPessoaExposto" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero cnpj cpf pessoa exposto</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomePessoaExposto" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>nome pessoa exposto</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag ativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--20160126 - Ajustes nos canonico-->
+  <xs:complexType name="HistoricoEndossoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>historico endosso</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="numeroItemVersaoOrcamento" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero item versao orcamento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoMovimentoEndosso" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo movimento endosso</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="textoDescricaoOcorrencia" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>texto descricao ocorrencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HistoricoPagadorParcelaEndossoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>historico pagador parcela versao proposta</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoHistoricoPagadorParcelaVersaoProposta" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo historico pagador parcela versao proposta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataAlteracaoParcela" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data alteracao parcela</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataVencimento" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data vencimento</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataPrazoCobertura" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data prazo cobertura</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaItemDocumentoEmissaoEBO">
+    <xs:sequence>
+      <xs:element name="itemDocumentoEmissao" type="ide:ItemDocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaPagadoresEBO">
+    <xs:sequence>
+      <xs:element name="pagador" type="PagadorEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaAnalisesEBO">
+    <xs:sequence>
+      <xs:element name="analise" maxOccurs="unbounded" minOccurs="0" type="aem:AnaliseEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaCorretoresEBO">
+    <xs:sequence>
+      <xs:element name="corretor" maxOccurs="unbounded" minOccurs="0" type="CorretorEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaIntervenientesEBO">
+    <xs:sequence>
+      <xs:element name="interveniente" type="IntervenienteEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaPendenciasEBO">
+    <xs:sequence>
+      <xs:element name="pendencia" minOccurs="0" maxOccurs="unbounded" type="PendenciaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaClausulasEBO">
+    <xs:sequence>
+      <xs:element name="clausula" maxOccurs="unbounded" minOccurs="0" type="cle:ClausulaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaBeneficiosEBO">
+    <xs:sequence>
+      <xs:element name="beneficio" type="BeneficioEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaFormaPagamentoEBO">
+    <xs:sequence>
+      <xs:element name="formaPagamento" type="FormaPagamentoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaCriticasEBO">
+    <xs:sequence>
+      <xs:element name="critica" minOccurs="0" maxOccurs="unbounded" type="cem:CriticaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaRespostaQuestionariosEBO">
+    <xs:sequence>
+      <xs:element name="respostaQuestionario" type="qem:RespostaQuestionarioEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaDescontosAgravosEBO">
+    <xs:sequence>
+      <xs:element name="descontoAgravo" type="dae:DescontoAgravoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaExposicoesEBO">
+    <xs:sequence>
+      <xs:element name="exposicao" type="ExposicaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaRespostaPendenciaEBO">
+    <xs:sequence>
+      <xs:element name="respostaPendencia" minOccurs="0" maxOccurs="unbounded" type="RespostaPendenciaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaPagadorParcelaEBO">
+    <xs:sequence>
+      <xs:element name="pagadorParcela" maxOccurs="unbounded" minOccurs="0" type="PagadorParcelaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--20160126 - Ajustes nos canonico-->
+  <xs:complexType name="ListaHistoricoEndossoEBO">
+    <xs:sequence>
+      <xs:element name="historicoEndosso" maxOccurs="unbounded" minOccurs="0" type="HistoricoEndossoEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaHistoricoPagadorParcelaEndossoEBO">
+    <xs:sequence>
+      <xs:element name="historicoPagadorParcelaEndosso" maxOccurs="unbounded" minOccurs="0" type="HistoricoPagadorParcelaEndossoEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SolicitacaoTransferenciaCorretagemEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>Solicitacao Transferencia Corretagem</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoSolicitacaoTransferenciaCorretagem" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Solicitacao Transferencia Corretagem</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCorretorDestino" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Corretor Destino</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataSolicitacao" minOccurs="0" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Data Solicitacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoUsuarioSolicitacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Usuario Solicitacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoEmpresaUsuarioSolicitacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Empresa Usuario Solicitacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoMatriculaUsuarioSolicitacao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Matricula Usuario Solicitacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagConclusaoTransferencia" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Conclusao Transferencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroApolice" minOccurs="0" type="xs:positiveInteger">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Numero Apolice</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaSolicitacoesTransferenciaCorretagemEBO">
+    <xs:sequence>
+      <xs:element name="solicitacaoTransferenciaCorretagem" maxOccurs="unbounded" minOccurs="0" type="SolicitacaoTransferenciaCorretagemEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SolicitacaoCartaoCreditoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>solicitacao cartao credito</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoSolicitacaoCartao" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo solicitacao cartao credito</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--erik.rocha - campos removidos para atender a analise de impacto 20160905-->
+      <xs:element name="codigoBandeiraCartao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo bandeira cartao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoBanco" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo banco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroAgenciaBancaria" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero agencia bancaria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroContaBancaria" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero conta bancaria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="digitoContaBancaria" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>digito conta bancaria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoStatusSolicitacaoCartaoCredito" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo status solicitacao cartao credito</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataSolicitacao" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data solicitacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="diaVencimentoCartao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>dia vencimento cartao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagDebitoContaCorrenteFatura" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag debito conta corrente fatura</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagPossuiCartaoAdicional" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag possui cartao adicional</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagSeguroPerdaRouboCartao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag seguro perda roubo cartao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagConfirmacaoSeguroPerdaRouboCartao" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag confirmacao seguro perda roubo cartao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAceitacaoMensagemSms" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag aceitacao mensagem sms</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagFaturaViaEmail" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag fatura via email</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAceitacaoEmailPromocional" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>flag aceitacao email promocional</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroProtocoloAnaliseCredito" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero protocolo analise credito</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DiasVencimento">
+    <xs:sequence>
+      <xs:element name="diaVencimento" maxOccurs="unbounded" minOccurs="0" type="DiaVencimento"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DiaVencimento">
+    <xs:sequence>
+      <xs:element name="codigoDiaVencimento" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>Vencimento Fatura Transporte Versao Proposta</entidade>
+            <atributo>Codigo Dia Vencimento Fatura Transporte</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaDocumentosEmissaoEBO">
+    <xs:sequence>
+      <xs:element name="documentoEmissao" type="DocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

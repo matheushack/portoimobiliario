@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/comum/ppwemissaoservice/v1_0" elementFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/comum/ppwemissaoservice/v1_0">
+  <xsd:element name="criarPropostaRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="xml" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="criarPropostaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="criarPropostaReturn" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="executarCalculoProdutoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="executarCalculoProdutoRequest" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="executarCalculoProdutoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="executarCalculoProdutoReturn" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="executarCalculoItemProdutoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="executarCalculoItemProdutoRequest" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="executarCalculoItemProdutoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="executarCalculoItemProdutoReturn" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="buscarDadosApoliceEndossoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="buscarDadosApoliceEndossoRequest" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="buscarDadosApoliceEndossoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="buscarDadosApoliceEndossoReturn" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="buscarDadosItemRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="xml" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="buscarDadosItemResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="xml" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="buscarDadosApoliceRenovacaoRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="xml" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="buscarDadosApoliceRenovacaoResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="buscarDadosApoliceRenovacaoReturn" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="reentrarPropostaRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="xml" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="reentrarPropostaResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="reentrarPropostaReturn" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/gerenciamentoriscobo/v1" version="1.0" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:moe="http://www.portoseguro.com.br/ramoselementares/administrativo/moedaebo/v1" xmlns:com="http://www.portoseguro.com.br/ramoselementares/admin/composicaomercadoriaebo/v1" xmlns:pes="http://www.portoseguro.com.br/ramoselementares/pessoa/pessoaebo/v1" xmlns="http://www.portoseguro.com.br/ramoselementares/emissao/gerenciamentoriscobo/v1">
+  <xs:import namespace="http://www.portoseguro.com.br/ramoselementares/administrativo/moedaebo/v1" schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11_12_13.xsd"/>
+  <xs:import namespace="http://www.portoseguro.com.br/ramoselementares/admin/composicaomercadoriaebo/v1" schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17_18_19.xsd"/>
+  <xs:import namespace="http://www.portoseguro.com.br/ramoselementares/pessoa/pessoaebo/v1" schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11.xsd"/>
+  <xs:complexType name="ListaGerenciamentoRiscoEBO">
+    <xs:sequence>
+      <xs:element name="gerenciamentoRisco" type="GerenciamentoRiscoEBO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GerenciamentoRiscoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao>Usado para acessar os gerenciamentos de risco</descricao>
+        <entidade>gerenciamento risco</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoGerenciamentoRisco" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo gerenciamento risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoGerenciamentoRisco" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo gerenciamento risco</atributo>
+            <regrasMapeamento>Buscar no dominio tipo gerenciamento risco</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoAbrangenciaGerenciamentoRisco" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo abrangencia gerenciamento risco</atributo>
+            <regrasMapeamento>Buscar no dominio abrangencia gerenciamento risco</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="moeda" minOccurs="0" type="moe:MoedaEBO"/>
+      <xs:element name="codigoTipoAtualizacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo atualizacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorMinimoGerenciamentoRisco" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>valor minimo gerenciamento risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaMercadoriasGerenciamentoRisco" minOccurs="0" type="ListaMercadoriasGerenciamentoRiscoEBO"/>
+      <xs:element name="embarcadoresGerenciamentoRisco" minOccurs="0" type="EmbarcadoresGerenciamentoRiscoEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EmbarcadoresGerenciamentoRiscoEBO">
+    <xs:sequence>
+      <xs:element name="embarcadorGerenciamentoRisco" type="EmbarcadorGerenciamentoRiscoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EmbarcadorGerenciamentoRiscoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>embarcador gerenciamento risco</entidade>
+        <descricao>E o limite do embarcador (e o transportador, relacionado ao seguro de transporte de mercadorias) para exigencia de gerenciamento de risco.</descricao>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="pessoaEmbarcador" minOccurs="0" type="pes:PessoaEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo pessoa embarcador</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="moeda" minOccurs="0" type="moe:MoedaEBO"/>
+      <xs:element name="codigoTipoAtualizacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo atualizacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorMinimoGerenciamentoRisco" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>valor minimo gerenciamento risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!--inclusão da estrutura de mercadoria gerenciamento risco - eduardo.rosell - 10112016-->
+  <xs:complexType name="ListaMercadoriasGerenciamentoRiscoEBO">
+    <xs:sequence>
+      <xs:element name="mercadoriaGerenciamentoRisco" type="MercadoriaGerenciamentoRiscoEBO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MercadoriaGerenciamentoRiscoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>mercadoria gerenciamento risco</entidade>
+        <descricao>E o limite da mercadoria para exigencia de gerenciamento de risco.</descricao>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoMercadoriaGerenciamento" minOccurs="0" type="xs:positiveInteger">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo mercadoria gerenciamento risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoMercadoria" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo mercadoria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaNomenclaturasBrasileirosMercadorias" minOccurs="0" type="com:ListaNbmEBO"/>
+      <xs:element name="listaNomenclaturasComunsMercosul" minOccurs="0" type="com:ListaNcmEBO"/>
+      <xs:element name="moeda" minOccurs="0" type="moe:MoedaEBO"/>
+      <xs:element name="codigoTipoAtualizacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo tipo atualizacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorMinimoGerenciamentoRisco" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>valor minimo gerenciamento risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

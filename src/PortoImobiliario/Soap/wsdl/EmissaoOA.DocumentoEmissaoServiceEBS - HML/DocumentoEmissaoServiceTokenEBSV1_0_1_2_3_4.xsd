@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/descontoagravoorigemdestinoebo/v1" elementFormDefault="qualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/emissao/descontoagravoorigemdestinoebo/v1">
+  <xs:complexType name="ListaDescontosAgravosOrigemDestinoEBO">
+    <xs:sequence>
+      <xs:element name="descontoAgravoOrigemDestino" type="DescontoAgravoOrigemDestinoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DescontoAgravoOrigemDestinoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade/>
+        <regrasMapeamento>Conforme esteja em Replicas de Faturamento ou Orcamento utilizar respectivamente tabela "desconto agravo origem destino versao apolice faturamento" ou "desconto agravo origem destino transporte versao orcamento"</regrasMapeamento>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="numeroSequenciaDescontoFaturamento" type="xs:long" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>desconto agravo origem destino versao apolice faturamento</entidade>
+            <atributo>numero sequencia desconto agravo origem destino faturamento</atributo>
+            <regrasMapeamento>se aplica somente se estiver em Replicas de Faturamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroSequenciaDescontoOrcamento" type="xs:long" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>desconto agravo origem destino transporte versao orcamento</entidade>
+            <atributo>numero sequencia desconto agravo origem destino transporte</atributo>
+            <regrasMapeamento>se aplica somente se estiver em Orcamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoPaisOrigem" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Utilizar o campo da tabela "desconto agravo origem destino versao apolice faturamento" ou "desconto agravo origem destino transporte versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoRegiaoGeograficaOrigem" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Utilizar o campo da tabela "desconto agravo origem destino versao apolice faturamento" ou "desconto agravo origem destino transporte versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoUnidadeFederacaoOrigem" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Utilizar o campo da tabela "desconto agravo origem destino versao apolice faturamento" ou "desconto agravo origem destino transporte versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoPaisDestino" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Utilizar o campo da tabela "desconto agravo origem destino versao apolice faturamento" ou "desconto agravo origem destino transporte versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoRegiaoGeograficaDestino" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Utilizar o campo da tabela "desconto agravo origem destino versao apolice faturamento" ou "desconto agravo origem destino transporte versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoUnidadeFederacaoDestino" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Utilizar o campo da tabela "desconto agravo origem destino versao apolice faturamento" ou "desconto agravo origem destino transporte versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoDescontoAgravo" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Utilizar o campo da tabela "desconto agravo origem destino versao apolice faturamento" ou "desconto agravo origem destino transporte versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualDescontoAgravo" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Utilizar o campo da tabela "desconto agravo origem destino versao apolice faturamento" ou "desconto agravo origem destino transporte versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoAtualizacao" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Utilizar o campo da tabela "desconto agravo origem destino versao apolice faturamento" ou "desconto agravo origem destino transporte versao orcamento"</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualDescontoAgravoAdendo" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>desconto agravo origem destino transporte versao orcamento</entidade>
+            <atributo>percentual desconto agravo adendo</atributo>
+            <regrasMapeamento>se aplica somente se estiver em Orcamento</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

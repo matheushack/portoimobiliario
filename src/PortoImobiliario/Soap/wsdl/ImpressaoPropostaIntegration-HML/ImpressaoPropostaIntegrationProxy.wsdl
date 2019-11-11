@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions targetNamespace="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" xmlns:WL5G3N2="http://www.porto.com/re/exception">
+  <WL5G3N0:import location="ImpressaoPropostaIntegrationProxy_1_2.wsdl" namespace="http://www.porto.com/re/exception"/>
+  <WL5G3N0:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns2="http://www.porto.com/re/exception" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <xs:schema xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns2="http://www.porto.com/re/exception" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" schemaLocation="ImpressaoPropostaIntegrationProxy_1_2.xsd"/>
+    </xs:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="imprimirPropostaRequest">
+    <WL5G3N0:part element="WL5G3N1:imprimirPropostaRequest" name="imprimirPropostaRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="imprimirPropostaResponse">
+    <WL5G3N0:part element="WL5G3N1:imprimirPropostaResponse" name="imprimirPropostaResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="ImpressaoPropostaPortType">
+    <WL5G3N0:operation name="imprimirProposta">
+      <WL5G3N0:input message="WL5G3N1:imprimirPropostaRequest"/>
+      <WL5G3N0:output message="WL5G3N1:imprimirPropostaResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+</WL5G3N0:definitions>

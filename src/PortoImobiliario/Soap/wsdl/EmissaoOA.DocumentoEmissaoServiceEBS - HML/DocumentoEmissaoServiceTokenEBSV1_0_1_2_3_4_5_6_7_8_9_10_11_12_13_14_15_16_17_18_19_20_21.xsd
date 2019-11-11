@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/documentoassociadoebo/v1" version="1.0" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/emissao/documentoassociadoebo/v1">
+  <xs:complexType name="DocumentoAssociadoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao>Objeto para exibir campos do documento associado ao Orcamento</descricao>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="dataInicioVigenciaAssociado" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimVigenciaAssociado" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataValidadeAssociado" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoStatusOrcamentoAssociado" type="xs:long" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoRamoAssociado" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoModalidadeAssociado" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoGrupoComercialAssociado" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroVersaoProdutoComercialAssociado" type="xs:long" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroSequenciaVersaoProdutoComercialAssociado" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCorretorAssociado" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorLimiteCoberturaBasicaOrcamentoAssociado" type="xs:decimal" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>Mapeado conforme regra de negocio ECT.RN.071</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

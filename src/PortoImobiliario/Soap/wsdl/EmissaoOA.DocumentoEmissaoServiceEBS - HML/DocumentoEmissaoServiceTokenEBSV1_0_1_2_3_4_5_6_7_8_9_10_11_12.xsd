@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/pessoa/enderecoebo/v1" elementFormDefault="qualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/pessoa/enderecoebo/v1">
+  <xs:complexType name="EnderecoEBO">
+    <xs:sequence>
+      <xs:element name="codigoEndereco" type="xs:long" minOccurs="0"/>
+      <xs:element name="codigoTipoLogradouro" type="xs:integer" minOccurs="0"/>
+      <xs:element name="codigoLogradouro" type="xs:integer" minOccurs="0"/>
+      <xs:element name="nomeLogradouro" type="xs:string" minOccurs="0"/>
+      <xs:element name="numeroLogradouro" type="xs:integer" minOccurs="0"/>
+      <xs:element name="flagSemNumero" type="xs:string" minOccurs="0"/>
+      <xs:element name="numeroCep" type="xs:long" minOccurs="0"/>
+      <xs:element name="nomeComplemento" type="xs:string" minOccurs="0"/>
+      <xs:element name="codigoBairro" type="xs:integer" minOccurs="0"/>
+      <xs:element name="nomeBairro" type="xs:string" minOccurs="0"/>
+      <xs:element name="codigoCidade" type="xs:integer" minOccurs="0"/>
+      <xs:element name="nomeCidade" type="xs:string" minOccurs="0"/>
+      <xs:element name="codigoUnidadeFederacao" type="xs:integer" minOccurs="0"/>
+      <xs:element name="codigoPais" minOccurs="0" type="xs:integer"/>
+      <xs:element name="textoPontoReferencia" type="xs:string" minOccurs="0"/>
+      <!--Alterado o type por Erik Rocha para compatibilizacao do banco de dados versao 20160419-->
+      <xs:element name="numeroLatitude" type="xs:decimal" minOccurs="0"/>
+      <!--Alterado o type por Erik Rocha para compatibilizacao do banco de dados versao 20160419-->
+      <xs:element name="numeroLongitude" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="codigoTipoEndereco" type="xs:integer" minOccurs="0"/>
+      <xs:element name="flagPrincipal" type="xs:string" minOccurs="0"/>
+      <xs:element name="flagAtivo" type="xs:string" minOccurs="0"/>
+      <!--Inlcuido o campo por Gabriel Salvador para compatibilizacao do banco de dados versao 20160426-->
+      <xs:element name="nomeSubdivisaoPais" type="xs:string" minOccurs="0"/>
+      <!--Patch - Atende Integracoes externas que consomem o servico (ex: gerpend) alessandro.pereira 20160615-->
+      <xs:element name="nomeTipoLogradouro" type="xs:string" minOccurs="0"/>
+      <xs:element name="nomeUnidadeFederacao" type="xs:string" minOccurs="0"/>
+      <xs:element name="complementoLogradouro" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaEnderecosEBO">
+    <xs:sequence>
+      <xs:element name="enderecoPessoa" type="EnderecoEBO" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

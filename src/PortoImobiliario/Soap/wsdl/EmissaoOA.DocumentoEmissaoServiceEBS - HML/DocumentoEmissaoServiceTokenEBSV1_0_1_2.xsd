@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/documentoemissaoservice/v1_0" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:doc="http://www.portoseguro.com.br/ramoselementares/emissao/documentoemissaoebo/v1" xmlns:ide="http://www.portoseguro.com.br/ramoselementares/emissao/itemdocumentoemissaoebo/v1">
+  <import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/emissao/documentoemissaoebo/v1"/>
+  <import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/emissao/itemdocumentoemissaoebo/v1"/>
+  <element name="listarDocumentoEmissaoPorSeguradoRequest">
+    <complexType>
+      <sequence>
+        <element name="codigoPessoa" type="long"/>
+        <element name="indicadorRetornaOrcamento" type="string"/>
+        <element name="indicadorRetornaProposta" type="string"/>
+        <element name="indicadorRetornaApolice" type="string"/>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="codigoCanal" minOccurs="0" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+        <element name="indicadorRetornaHistorico" type="string"/>
+        <element name="dataInicio" minOccurs="0" type="date"/>
+        <element name="dataFim" minOccurs="0" type="date"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorSeguradoResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissaoPorSegurado">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorIdRequest">
+    <complexType>
+      <sequence>
+        <element name="numeroOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroProposta" minOccurs="0" type="long"/>
+        <element name="numeroApolice" minOccurs="0" type="positiveInteger"/>
+        <element name="codigoTipoDocumento" type="string"/>
+        <element name="indicadorRetornaOrcamento" type="string"/>
+        <element name="indicadorRetornaProposta" type="string"/>
+        <element name="indicadorRetornaApolice" type="string"/>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="codigoCanal" minOccurs="0" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+        <element name="indicadorRetornaHistorico" type="string"/>
+        <element name="dataInicio" minOccurs="0" type="date"/>
+        <element name="dataFim" minOccurs="0" type="date"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorIdResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissaoPorId">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" maxOccurs="unbounded" minOccurs="0"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorCorretorRequest">
+    <complexType>
+      <sequence>
+        <element name="codigoCorretorPrincipal" type="string"/>
+        <element name="dataInicio" minOccurs="0" type="date"/>
+        <element name="dataFim" minOccurs="0" type="date"/>
+        <element name="codigoEmpresa" minOccurs="0" type="integer"/>
+        <element name="codigoCanal" type="integer"/>
+        <element name="codigoRamo" type="integer"/>
+        <element name="codigoModalidade" type="integer"/>
+        <element name="codigoOferta" type="integer"/>
+        <element name="indicadorRetornaOrcamento" minOccurs="0" type="string"/>
+        <element name="indicadorRetornaProposta" minOccurs="0" type="string"/>
+        <element name="indicadorRetornaApolice" minOccurs="0" type="string"/>
+        <element name="codigoGrupoComercial" minOccurs="0" type="integer"/>
+        <element name="numeroVersaoProdutoComercial" minOccurs="0" type="long"/>
+        <element name="numeroSequenciaVersaoProdutoComercial" minOccurs="0" type="integer"/>
+        <element name="codigoParceiroNegocio" minOccurs="0" type="long"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorCorretorResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissaoPorCorretor">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" maxOccurs="unbounded" minOccurs="0"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorCategoriaGenericaRequest">
+    <complexType>
+      <sequence>
+        <element name="nomeCategoriaGenerico" type="string"/>
+        <element name="codigoCanal" minOccurs="0" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+        <element name="dataInicio" minOccurs="0" type="date"/>
+        <element name="dataFim" minOccurs="0" type="date"/>
+        <element name="indicadorRetornaHistorico" type="string"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorCategoriaGenericaResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissaoPorCategoriaGenerica">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorCategoriaEventoRequest">
+    <complexType>
+      <sequence>
+        <element name="codigoCategoriaEvento" type="integer"/>
+        <element name="codigoTemaEvento" type="integer"/>
+        <element name="codigoTipoLocal" type="integer"/>
+        <element name="nomeEvento" type="string"/>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="codigoCanal" minOccurs="0" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+        <element name="dataInicio" minOccurs="0" type="date"/>
+        <element name="dataFim" minOccurs="0" type="date"/>
+        <element name="indicadorRetornaHistorico" minOccurs="0" type="string"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorCategoriaEventoResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissaoPorCategoriaEvento">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" maxOccurs="unbounded" minOccurs="0"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorCategoriaLocalRequest">
+    <complexType>
+      <sequence>
+        <element name="codigoTipoLogradouro" type="integer"/>
+        <element name="nomeLogradouro" type="string"/>
+        <element name="numeroLogradouro" type="integer"/>
+        <element name="numeroCep" type="long"/>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="codigoCanal" minOccurs="0" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+        <element name="dataInicio" minOccurs="0" type="date"/>
+        <element name="dataFim" minOccurs="0" type="date"/>
+        <element name="indicadorRetornaHistorico" minOccurs="0" type="string"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorCategoriaLocalResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissaoPorCategoriaLocal">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" maxOccurs="unbounded" minOccurs="0"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorCartaRequest">
+    <complexType>
+      <sequence>
+        <element name="listaNumeroCarta">
+          <complexType>
+            <sequence>
+              <element name="numeroCarta" maxOccurs="unbounded" type="integer"/>
+            </sequence>
+          </complexType>
+        </element>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="codigoCanal" minOccurs="0" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+        <element name="dataInicio" minOccurs="0" type="date"/>
+        <element name="dataFim" minOccurs="0" type="date"/>
+        <element name="indicadorRetornaHistorico" type="string"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorCartaResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissaoPorCarta">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="buscarDocumentoEmissaoPorIdRequest">
+    <complexType>
+      <sequence>
+        <element name="numeroOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroVersaoOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroProposta" minOccurs="0" type="long"/>
+        <element name="numeroVersaoProposta" minOccurs="0" type="long"/>
+        <element name="numeroApolice" minOccurs="0" type="positiveInteger"/>
+        <element name="codigoTipoDocumento" type="string"/>
+        <element name="indicadorRetornaOrcamento" type="string"/>
+        <element name="indicadorRetornaProposta" type="string"/>
+        <element name="indicadorRetornaApolice" type="string"/>
+        <element name="codigoCorretor" minOccurs="0" type="string">
+          <annotation>
+            <documentation>
+              <entidade>versao orcamento</entidade>
+              <atributo>codigo corretor principal</atributo>
+              <comportamentoDoServico>Campo usado para validação conforme AR.RN.019</comportamentoDoServico>
+              <regrasMapeamento>Campo usado para validação conforme AR.RN.019</regrasMapeamento>
+            </documentation>
+          </annotation>
+        </element>
+        <element name="flagApoliceVigente" minOccurs="0" type="string">
+          <annotation>
+            <documentation>
+              <comportamentoDoServico>Campo usado para validação conforme AR.RN.019</comportamentoDoServico>
+              <regrasMapeamento>Campo usado para validação conforme AR.RN.019</regrasMapeamento>
+            </documentation>
+          </annotation>
+        </element>
+        <element name="flagApoliceAtiva" minOccurs="0" type="string">
+          <annotation>
+            <documentation>
+              <comportamentoDoServico>Campo usado para validação conforme AR.RN.019</comportamentoDoServico>
+              <regrasMapeamento>Campo usado para validação conforme AR.RN.019</regrasMapeamento>
+            </documentation>
+          </annotation>
+        </element>
+        <element name="numeroApoliceSemNumeroEndosso" minOccurs="0" type="long">
+          <annotation>
+            <documentation>
+              <entidade>apolice</entidade>
+              <atributo>numero apolice sem numero endosso</atributo>
+              <regrasMapeamento>Campo usado para validação conforme GE.RN.072</regrasMapeamento>
+            </documentation>
+          </annotation>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="buscarDocumentoEmissaoPorIdResponse">
+    <complexType>
+      <sequence>
+        <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="buscarItemDocumentoEmissaoPorIdRequest">
+    <complexType>
+      <sequence>
+        <element name="numeroOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroVersaoOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroItemVersaoOrcamento" minOccurs="0" type="integer"/>
+        <element name="numeroProposta" minOccurs="0" type="long"/>
+        <element name="numeroVersaoProposta" minOccurs="0" type="long"/>
+        <element name="numeroApolice" minOccurs="0" type="positiveInteger"/>
+        <element name="codigoTipoDocumento" type="string"/>
+        <element name="indicadorRetornaOrcamento" type="string"/>
+        <element name="indicadorRetornaProposta" type="string"/>
+        <element name="indicadorRetornaApolice" type="string"/>
+        <element name="flagRetornaDetalheMercadoria" minOccurs="0" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="buscarItemDocumentoEmissaoPorIdResponse">
+    <complexType>
+      <sequence>
+        <element name="itemDocumentoEmissao" type="ide:ItemDocumentoEmissaoEBO" minOccurs="0"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="listarItensDocumentoEmissaoRequest">
+    <complexType>
+      <sequence>
+        <element name="numeroOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroVersaoOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroProposta" minOccurs="0" type="long"/>
+        <element name="numeroVersaoProposta" minOccurs="0" type="long"/>
+        <element name="numeroApolice" minOccurs="0" type="positiveInteger"/>
+        <element name="codigoTipoDocumento" type="string"/>
+        <element name="indicadorRetornaOrcamento" type="string"/>
+        <element name="indicadorRetornaProposta" type="string"/>
+        <element name="indicadorRetornaApolice" type="string"/>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="codigoCanal" minOccurs="0" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarItensDocumentoEmissaoResponse">
+    <complexType>
+      <sequence>
+        <element name="listaItemDocumentoEmissao">
+          <complexType>
+            <sequence>
+              <element name="itemDocumentoEmissao" type="ide:ItemDocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarItensDocumentoEmissaoPorCoberturaRequest">
+    <complexType>
+      <sequence>
+        <element name="numeroOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroVersaoOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroProposta" minOccurs="0" type="long"/>
+        <element name="numeroVersaoProposta" minOccurs="0" type="long"/>
+        <element name="numeroApolice" minOccurs="0" type="positiveInteger"/>
+        <element name="codigoTipoDocumento" type="string"/>
+        <element name="indicadorRetornaOrcamento" type="string"/>
+        <element name="indicadorRetornaProposta" type="string"/>
+        <element name="indicadorRetornaApolice" type="string"/>
+        <element name="listaCodigoCobertura">
+          <complexType>
+            <sequence>
+              <element name="codigoCobertura" type="integer" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+        <element name="codigoEmpresa" minOccurs="0" type="integer"/>
+        <element name="codigoCanal" minOccurs="0" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarItensDocumentoEmissaoPorCoberturaResponse">
+    <complexType>
+      <sequence>
+        <element name="listaItemDocumentoEmissaoPorCobertura">
+          <complexType>
+            <sequence>
+              <element name="itemDocumentoEmissao" type="ide:ItemDocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorPeriodoPorIdSeguradoRequest">
+    <complexType>
+      <sequence>
+        <element name="codigosPessoa">
+          <complexType>
+            <sequence>
+              <element minOccurs="0" maxOccurs="unbounded" name="codigoPessoa" type="long"/>
+            </sequence>
+          </complexType>
+        </element>
+        <element name="indicadorRetornaOrcamento" type="string"/>
+        <element name="indicadorRetornaProposta" type="string"/>
+        <element name="indicadorRetornaApolice" type="string"/>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoCorretor" type="string" minOccurs="0"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+        <element name="dataReferenciaStatus" type="date" minOccurs="0"/>
+        <element name="dataReferenciaVigencia" type="date" minOccurs="0"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorPeriodoPorIdSeguradoResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissao">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorPeriodoPorCorretorRequest">
+    <complexType>
+      <sequence>
+        <element name="codigosPessoa">
+          <complexType>
+            <sequence>
+              <element minOccurs="0" maxOccurs="unbounded" name="codigoPessoa" type="long"/>
+            </sequence>
+          </complexType>
+        </element>
+        <element name="indicadorRetornaOrcamento" type="string"/>
+        <element name="indicadorRetornaProposta" type="string"/>
+        <element name="indicadorRetornaApolice" type="string"/>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+        <element name="codigoCorretor" type="string"/>
+        <element name="dataReferenciaStatus" type="date" minOccurs="0"/>
+        <element name="dataReferenciaVigencia" type="date" minOccurs="0"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorPeriodoPorCorretorResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoPorCorretor">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorPeriodoPorNumeroApoliceRequest">
+    <complexType>
+      <sequence>
+        <element name="numeroOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroProposta" minOccurs="0" type="long"/>
+        <element name="numeroApolice" minOccurs="0" type="positiveInteger"/>
+        <element name="numeroSequenciaApolice" minOccurs="0" type="long"/>
+        <element name="codigoTipoDocumento" type="string"/>
+        <element name="indicadorRetornaOrcamento" type="string"/>
+        <element name="indicadorRetornaProposta" type="string"/>
+        <element name="indicadorRetornaApolice" type="string"/>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+        <element name="codigoCorretor" type="string" minOccurs="0"/>
+        <element name="dataReferenciaStatus" type="date" minOccurs="0"/>
+        <element name="dataReferenciaVigencia" type="date" minOccurs="0"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorPeriodoPorNumeroApoliceResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoPorApolice">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="buscaDocumentoPorNumeroECorretorRequest">
+    <complexType>
+      <sequence>
+        <element name="numeroOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroProposta" minOccurs="0" type="long"/>
+        <element name="codigoCorretor" type="string"/>
+        <element name="codigoTipoDocumento" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="buscaDocumentoPorNumeroECorretorResponse">
+    <complexType>
+      <sequence>
+        <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="buscaDocumentoPorInspecaoRequest">
+    <complexType>
+      <sequence>
+        <element name="numeroSolicitacaoInspecao" minOccurs="0" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="buscaDocumentoPorInspecaoResponse">
+    <complexType>
+      <sequence>
+        <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0"/>
+      </sequence>
+    </complexType>
+  </element>
+  <!--Patch alessandro.pereira - operacao orquestrada para enriquecer dados para o Gerpend -> nomeTipoLogradouro e nomeUnidadeFederacao-->
+  <element name="buscarDocumentoEmissaoComplementarPorIdRequest">
+    <complexType>
+      <sequence>
+        <element name="numeroOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroVersaoOrcamento" minOccurs="0" type="long"/>
+        <element name="numeroProposta" minOccurs="0" type="long"/>
+        <element name="numeroVersaoProposta" minOccurs="0" type="long"/>
+        <element name="numeroApolice" minOccurs="0" type="positiveInteger"/>
+        <element name="codigoTipoDocumento" type="string"/>
+        <element name="indicadorRetornaOrcamento" type="string"/>
+        <element name="indicadorRetornaProposta" type="string"/>
+        <element name="indicadorRetornaApolice" type="string"/>
+        <element name="codigoCorretor" minOccurs="0" type="string"/>
+        <element name="flagApoliceVigente" minOccurs="0" type="string"/>
+        <element name="flagApoliceAtiva" minOccurs="0" type="string"/>
+        <element name="numeroApoliceSemNumeroEndosso" minOccurs="0" type="long"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="buscarDocumentoEmissaoComplementarPorIdResponse">
+    <complexType>
+      <sequence>
+        <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorLicitacaoRequest">
+    <complexType>
+      <sequence>
+        <element name="listaNumeroProcessoLicitacao">
+          <complexType>
+            <sequence>
+              <element name="numeroProcessoLicitacao" maxOccurs="unbounded" type="string"/>
+            </sequence>
+          </complexType>
+        </element>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="codigoCanal" minOccurs="0" type="integer"/>
+        <element name="codigoRamo" minOccurs="0" type="integer"/>
+        <element name="codigoModalidade" minOccurs="0" type="integer"/>
+        <element name="codigoOferta" minOccurs="0" type="integer"/>
+        <element name="dataInicio" minOccurs="0" type="date"/>
+        <element name="dataFim" minOccurs="0" type="date"/>
+        <element name="indicadorRetornaHistorico" type="string"/>
+      </sequence>
+      <attribute name="Skip" type="integer" use="required"/>
+      <attribute name="Top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorLicitacaoResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissaoPorLicitacao">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorObjetoSimilarRequest">
+    <complexType>
+      <sequence>
+        <element name="numeroOrcamento" type="long" minOccurs="0"/>
+        <element name="numeroVersaoOrcamento" type="long" minOccurs="0"/>
+        <element name="numeroProposta" type="long" minOccurs="0"/>
+        <element name="numeroVersaoProposta" type="long" minOccurs="0"/>
+        <element name="numeroApolice" type="positiveInteger" minOccurs="0"/>
+        <element name="codigoTipoDocumento" type="string"/>
+      </sequence>
+      <attribute name="skip" type="integer" use="required"/>
+      <attribute name="top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoEmissaoPorObjetoSimilarResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissaoPorSegurado">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoPorNumeroPessoaLocalRiscoRequest">
+    <complexType>
+      <sequence>
+        <element name="codigoEmpresa" type="integer"/>
+        <element name="quantidadeAnos" type="integer" minOccurs="0"/>
+        <element name="quantidadeRegistros" type="integer" minOccurs="0"/>
+        <element name="codigoPessoa" type="integer" minOccurs="0"/>
+        <element name="PapelPessoa" type="integer" minOccurs="0"/>
+        <element name="codigoTipoDocumento" type="string" minOccurs="0"/>
+        <element name="numeroSequenciaApolice" type="long" minOccurs="0"/>
+        <element name="codigoSucursal" type="integer" minOccurs="0"/>
+        <element name="codigoRamo" type="integer" minOccurs="0"/>
+        <element name="numeroProposta" type="long" minOccurs="0"/>
+        <element name="LocalRiscoCep" type="integer" minOccurs="0"/>
+        <element name="LocalRiscoNumero" type="integer" minOccurs="0"/>
+      </sequence>
+      <attribute name="skip" type="integer" use="required"/>
+      <attribute name="top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarDocumentoPorNumeroPessoaLocalRiscoResponse">
+    <complexType>
+      <sequence>
+        <element name="listaDocumentoEmissao">
+          <complexType>
+            <sequence>
+              <element name="documentoEmissao" type="doc:DocumentoEmissaoEBO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+  <element name="listarBlocoCondominioRequest">
+    <complexType>
+      <sequence>
+        <element name="codigoEmpresa" type="integer" minOccurs="0"/>
+        <element name="codigoOrigemEmissao" type="integer" minOccurs="0"/>
+        <element name="tipoDocumento" type="string" minOccurs="0"/>
+        <element name="numeroSequenciaApolice" type="long" minOccurs="0"/>
+        <element name="codigoSucursal" type="integer" minOccurs="0"/>
+        <element name="codigoRamo" type="integer" minOccurs="0"/>
+        <element name="numeroProposta" type="long" minOccurs="0"/>
+        <element name="numeroItemVersaoOrcamento" type="integer" minOccurs="0"/>
+      </sequence>
+      <attribute name="skip" type="integer" use="required"/>
+      <attribute name="top" type="integer" use="required"/>
+    </complexType>
+  </element>
+  <element name="listarBlocoCondominioResponse">
+    <annotation>
+      <documentation>Retorno da busca de blocos de condomínios</documentation>
+    </annotation>
+    <complexType>
+      <sequence>
+        <element name="BlocosCondominio" minOccurs="0" maxOccurs="unbounded">
+          <complexType>
+            <sequence>
+              <element name="numeroItemVersaoOrcamento" type="integer" minOccurs="0">
+                <annotation>
+                  <documentation>
+                    <entidade>categoria objeto risco versao orcamento</entidade>
+                    <atributo>numero item versao orcamento</atributo>
+                  </documentation>
+                </annotation>
+              </element>
+              <element name="nomeBlocoCondominio" type="string" minOccurs="0">
+                <annotation>
+                  <documentation>
+                    <entidade>condominio objeto risco</entidade>
+                    <atributo>nome bloco condominio</atributo>
+                  </documentation>
+                </annotation>
+              </element>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+      <attribute name="pagina" type="integer"/>
+      <attribute name="quantidadeDeLinhas" type="integer"/>
+      <attribute name="quantidadeDePaginas" type="integer"/>
+      <attribute name="quantidadeTotalRegistros" type="integer"/>
+    </complexType>
+  </element>
+</schema>

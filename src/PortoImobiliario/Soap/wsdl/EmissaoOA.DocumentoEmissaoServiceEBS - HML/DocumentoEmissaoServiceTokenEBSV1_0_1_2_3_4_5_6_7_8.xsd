@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/descontoagravoemissaoebo/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:des="http://www.portoseguro.com.br/ramoselementares/emissao/descontoagravoemissaoebo/v1">
+  <complexType name="DescontoAgravoEBO">
+    <annotation>
+      <documentation>
+        <entidade/>
+      </documentation>
+    </annotation>
+    <sequence>
+      <element name="codigoDescontoAgravo" minOccurs="0" type="integer"/>
+      <element name="percentualDescontoAgravo" minOccurs="0" type="decimal"/>
+      <element name="valorDescontoAgravo" minOccurs="0" type="decimal"/>
+      <element name="codigoTipoDescontoAgravo" minOccurs="0" type="integer"/>
+      <element name="codigoLocalDesconto" minOccurs="0" type="long">
+        <annotation>
+          <documentation>
+            <entidade>desconto agravo item versao orcamento</entidade>
+            <atributo>codigo local desconto</atributo>
+            <regrasMapeamento>Campo usado somente quando desconto/agravo associado a entidade</regrasMapeamento>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="flagAdendo" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <atributo>flag adendo</atributo>
+            <regrasMapeamento/>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="codigoTipoAtualizacao" minOccurs="0" type="integer">
+        <annotation>
+          <documentation>
+            <atributo>codigo tipo atualizacao</atributo>
+            <regrasMapeamento/>
+          </documentation>
+        </annotation>
+      </element>
+      <!--eduardo.rosell - 2016-10-13 - Inclusão do campo de percentualDescontoAgravoAdendo-->
+      <element name="percentualDescontoAgravoAdendo" minOccurs="0" type="decimal">
+        <annotation>
+          <documentation>
+            <atributo>percentual desconto agravo adendo</atributo>
+            <regrasMapeamento/>
+          </documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+</schema>

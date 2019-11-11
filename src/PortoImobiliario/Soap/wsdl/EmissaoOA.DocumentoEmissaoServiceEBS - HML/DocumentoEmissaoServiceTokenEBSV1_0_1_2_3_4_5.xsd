@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/criticaemissaoebo/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cem="http://www.portoseguro.com.br/ramoselementares/emissao/criticaemissaoebo/v1">
+  <complexType name="CriticaEBO">
+    <annotation>
+      <documentation>
+        <entidade/>
+      </documentation>
+    </annotation>
+    <sequence>
+      <element name="codigoCritica" minOccurs="0" type="integer"/>
+      <element name="dataCritica" minOccurs="0" type="date"/>
+      <element name="textoRetornoCritica" minOccurs="0" type="string"/>
+      <element name="nomeResumidoCritica" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <entidade>critica seguro</entidade>
+            <atributo>nome resumido critica</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="nomeCritica" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <entidade>critica seguro</entidade>
+            <atributo>nome critica</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="codigoTipoCritica" minOccurs="0" type="integer">
+        <annotation>
+          <documentation>
+            <entidade>critica seguro</entidade>
+            <atributo>codigo tipo critica</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="codigoStatusCritica" minOccurs="0" type="integer"/>
+      <element name="codigoGrupoAcesso" minOccurs="0" type="integer">
+        <annotation>
+          <documentation>
+            <entidade>critica seguro</entidade>
+            <atributo>codigo grupo acesso</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="textoCritica" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <entidade>critica seguro</entidade>
+            <atributo>texto critica</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="flagJustificativaLiberacaoObrigatorio" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <entidade>critica seguro</entidade>
+            <atributo>flag justificativa liberacao obrigatorio</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="flagAtivo" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <entidade>critica seguro</entidade>
+            <atributo>flag ativo</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="textoComentario" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <entidade>critica seguro</entidade>
+            <atributo>texto comentario</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="listaDevolutiva" type="cem:ListaDevolutivaEBO" minOccurs="0"/>
+      <!--20160126 - Ajustes nos canonico-->
+      <element name="nomePerfilPrincipalSistemaGerenciamentoProcesso" minOccurs="0" type="string"/>
+      <element name="textoPerfilParticipanteSistemaGerenciamentoProcesso" minOccurs="0" type="string"/>
+      <!--20160718 - incluindo campo para ajuste na interface com ILOG-->
+      <element name="codigoPrioridadeCritica" minOccurs="0" type="integer">
+        <annotation>
+          <documentation>
+            <atributo>codigo prioridade critica</atributo>
+          </documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="ListaDevolutivaEBO">
+    <sequence>
+      <element name="devolutiva" type="cem:DevolutivaEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </sequence>
+  </complexType>
+  <complexType name="DevolutivaEBO">
+    <annotation>
+      <documentation>
+        <entidade>devolutiva</entidade>
+      </documentation>
+    </annotation>
+    <sequence>
+      <element name="codigoDevolutiva" minOccurs="0" type="integer">
+        <annotation>
+          <documentation>
+            <atributo>codigo devolutiva</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="nomeDevolutiva" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <atributo>nome devolutiva</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="nomeResumidoDevolutiva" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <atributo>nome resumido devolutiva</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="codigoTipoDevolutiva" minOccurs="0" type="integer">
+        <annotation>
+          <documentation>
+            <atributo>codigo tipo devolutiva</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="codigoModeloCarta" minOccurs="0" type="integer">
+        <annotation>
+          <documentation>
+            <atributo>codigo modelo carta</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="flagAtivo" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <atributo>flag ativo</atributo>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="textoComentario" minOccurs="0" type="string">
+        <annotation>
+          <documentation>
+            <atributo>texto comentario</atributo>
+          </documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+</schema>

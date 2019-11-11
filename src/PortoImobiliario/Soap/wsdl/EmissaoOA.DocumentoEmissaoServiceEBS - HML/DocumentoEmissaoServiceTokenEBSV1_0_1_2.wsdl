@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions targetNamespace="http://www.porto.com/re/exception" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.portoseguro.com.br/foundation/PortoSeguroMessage/v1_0">
+  <WL5G3N0:types>
+    <xs:schema xmlns:ns2="http://www.portoseguro.com.br/foundation/PortoSeguroMessage/v1_0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.portoseguro.com.br/foundation/PortoSeguroMessage/v1_0" schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0.xsd"/>
+    </xs:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="PortoFaultException">
+    <WL5G3N0:part element="WL5G3N1:portoSeguroFaultInfo" name="fault"/>
+  </WL5G3N0:message>
+</WL5G3N0:definitions>

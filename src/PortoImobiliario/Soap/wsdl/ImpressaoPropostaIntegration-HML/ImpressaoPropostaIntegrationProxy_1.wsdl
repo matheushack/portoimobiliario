@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions targetNamespace="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:import location="ImpressaoPropostaIntegrationProxy.wsdl" namespace="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0"/>
+  <WL5G3N0:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0/types" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </WL5G3N0:types>
+  <WL5G3N0:binding name="ImpressaoPropostaServicePortTypeSOAP11Binding" type="WL5G3N1:ImpressaoPropostaPortType">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="imprimirProposta">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="imprimirPropostaRequest" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="imprimirPropostaResponse" use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="PortoFaultException">
+        <WL5G3N2:fault name="PortoFaultException" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="ImpressaoPropostaServicePortTypeSOAP11BindingQSService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port binding="WL5G3N1:ImpressaoPropostaServicePortTypeSOAP11Binding" name="ImpressaoPropostaServicePortTypeSOAP11BindingQSPort">
+      <WL5G3N2:address location="https://osbhml2re.portoseguro.brasil:443/ImpressaoPropostaIntegrationService/ImpressaoPropostaIntegrationProxy"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

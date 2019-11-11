@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/analiseemissaoebo/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema">
+  <complexType name="AnaliseEBO">
+    <sequence>
+      <element name="numeroSequenciaAnalise" minOccurs="0" type="integer"/>
+      <element name="codigoTipoParecer" minOccurs="0" type="integer"/>
+      <element name="codigoStatusParecer" minOccurs="0" type="integer"/>
+      <element name="textoAnalise" minOccurs="0" type="string"/>
+      <element name="dataUltimaAlteracao" minOccurs="0" type="dateTime"/>
+      <element name="codigoTipoUsuarioUltimaAlteracao" minOccurs="0" type="string"/>
+      <element name="codigoEmpresaUsuarioUltimaAlteracao" minOccurs="0" type="string"/>
+      <element name="codigoMatriculaUsuarioUltimaAlteracao" minOccurs="0" type="string"/>
+    </sequence>
+  </complexType>
+</schema>

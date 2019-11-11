@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" elementFormDefault="qualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1_0" xmlns:ns2="http://www.portoseguro.com.br/foundation/PortoSeguroMessage/v1_0" xmlns:imp="http://www.portoseguro.com.br/ramoselementares/comum/impressaopropostaservice/v1">
+  <xs:import schemaLocation="ImpressaoPropostaIntegrationProxy.xsd" namespace="http://www.portoseguro.com.br/foundation/PortoSeguroMessage/v1_0"/>
+  <xs:element name="imprimirPropostaRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="numeroProposta" type="xs:long" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="numeroVersaoProposta" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="codigoTipoFormulario" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="imprimirPropostaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nomeArquivo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="diretorioArquivo" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="token" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

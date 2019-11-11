@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions targetNamespace="http://www.portoseguro.com.br/ramoselementares/comum/ppwemissaoservice/v1_0" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.portoseguro.com.br/ramoselementares/comum/ppwemissaoservice/v1_0" xmlns:WL5G3N2="http://www.porto.com/re/exception">
+  <WL5G3N0:import location="PpwEmissaoImobiliariaIntegrationServiceV1_0_1_2.wsdl" namespace="http://www.porto.com/re/exception"/>
+  <WL5G3N0:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.portoseguro.com.br/ramoselementares/comum/ppwemissaoservice/v1_0/types" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns2="http://www.porto.com/re/exception" xmlns:ppw="http://www.portoseguro.com.br/ramoselementares/comum/ppwemissaoservice/v1_0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://www.portoseguro.com.br/ramoselementares/comum/ppwemissaoservice/v1_0" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+    <xsd:schema xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns2="http://www.porto.com/re/exception" xmlns:ppw="http://www.portoseguro.com.br/ramoselementares/comum/ppwemissaoservice/v1_0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://www.portoseguro.com.br/ramoselementares/comum/ppwemissaoservice/v1_0" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.portoseguro.com.br/ramoselementares/comum/ppwemissaoservice/v1_0" schemaLocation="PpwEmissaoImobiliariaIntegrationServiceV1_0_1_2.xsd"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="criarPropostaRequest">
+    <WL5G3N0:part element="WL5G3N1:criarPropostaRequest" name="criarPropostaRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="criarPropostaResponse">
+    <WL5G3N0:part element="WL5G3N1:criarPropostaResponse" name="criarPropostaResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="executarCalculoProdutoRequest">
+    <WL5G3N0:part element="WL5G3N1:executarCalculoProdutoRequest" name="executarCalculoProdutoRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="executarCalculoProdutoResponse">
+    <WL5G3N0:part element="WL5G3N1:executarCalculoProdutoResponse" name="executarCalculoProdutoResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="executarCalculoItemProdutoRequest">
+    <WL5G3N0:part element="WL5G3N1:executarCalculoItemProdutoRequest" name="executarCalculoItemProdutoRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="executarCalculoItemProdutoResponse">
+    <WL5G3N0:part element="WL5G3N1:executarCalculoItemProdutoResponse" name="executarCalculoItemProdutoResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarDadosApoliceEndossoRequest">
+    <WL5G3N0:part element="WL5G3N1:buscarDadosApoliceEndossoRequest" name="buscarDadosApoliceEndossoRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarDadosApoliceEndossoResponse">
+    <WL5G3N0:part element="WL5G3N1:buscarDadosApoliceEndossoResponse" name="buscarDadosApoliceEndossoResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarDadosItemRequest">
+    <WL5G3N0:part element="WL5G3N1:buscarDadosItemRequest" name="buscarDadosItemRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarDadosItemResponse">
+    <WL5G3N0:part element="WL5G3N1:buscarDadosItemResponse" name="buscarDadosItemResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarDadosApoliceRenovacaoRequest">
+    <WL5G3N0:part element="WL5G3N1:buscarDadosApoliceRenovacaoRequest" name="buscarDadosApoliceRenovacaoRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="buscarDadosApoliceRenovacaoResponse">
+    <WL5G3N0:part element="WL5G3N1:buscarDadosApoliceRenovacaoResponse" name="buscarDadosApoliceRenovacaoResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="reentrarPropostaRequest">
+    <WL5G3N0:part element="WL5G3N1:reentrarPropostaRequest" name="reentrarPropostaRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="reentrarPropostaResponse">
+    <WL5G3N0:part element="WL5G3N1:reentrarPropostaResponse" name="reentrarPropostaResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="PpwEmissaoPortType">
+    <WL5G3N0:operation name="executarCalculoItemProduto">
+      <WL5G3N0:input message="WL5G3N1:executarCalculoItemProdutoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:executarCalculoItemProdutoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="executarCalculoProduto">
+      <WL5G3N0:input message="WL5G3N1:executarCalculoProdutoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:executarCalculoProdutoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="criarProposta">
+      <WL5G3N0:input message="WL5G3N1:criarPropostaRequest"/>
+      <WL5G3N0:output message="WL5G3N1:criarPropostaResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="buscarDadosApoliceEndosso">
+      <WL5G3N0:input message="WL5G3N1:buscarDadosApoliceEndossoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:buscarDadosApoliceEndossoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="buscarDadosApoliceRenovacao">
+      <WL5G3N0:input message="WL5G3N1:buscarDadosApoliceRenovacaoRequest"/>
+      <WL5G3N0:output message="WL5G3N1:buscarDadosApoliceRenovacaoResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="buscarDadosItem">
+      <WL5G3N0:input message="WL5G3N1:buscarDadosItemRequest"/>
+      <WL5G3N0:output message="WL5G3N1:buscarDadosItemResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="reentrarProposta">
+      <WL5G3N0:input message="WL5G3N1:reentrarPropostaRequest"/>
+      <WL5G3N0:output message="WL5G3N1:reentrarPropostaResponse"/>
+      <WL5G3N0:fault message="WL5G3N2:PortoFaultException" name="PortoFaultException"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+</WL5G3N0:definitions>

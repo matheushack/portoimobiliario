@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/clausulaemissaoebo/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema">
+  <complexType name="ClausulaEBO">
+    <sequence>
+      <element name="codigoClausula" minOccurs="0" type="integer"/>
+      <element name="numeroVersaoClausula" minOccurs="0" type="long"/>
+      <element name="numeroSequenciaClausula" minOccurs="0" type="long"/>
+      <element name="codigoTipoClausula" type="integer" minOccurs="0"/>
+      <!--20160126 - Ajustes nos canonico-->
+      <element name="codigoTipoAtualizacao" type="integer" minOccurs="0"/>
+      <element name="valorPremio" minOccurs="0" type="decimal"/>
+      <element name="valorImpostoOperacaoFinanceira" minOccurs="0" type="decimal"/>
+      <element name="flagObrigatorio" minOccurs="0" type="string"/>
+      <element name="flagEdicaoManual" minOccurs="0" type="string"/>
+      <element name="flagAtivo" minOccurs="0" type="string"/>
+      <element name="textoClausula" minOccurs="0" type="string"/>
+      <element name="qtdDiasPrazoReanalise" minOccurs="0" type="long"/>
+      <element name="valorPremioSubvencaoFederalAgronegocio" minOccurs="0" type="decimal"/>
+      <element name="valorPremioSubvencaoEstadualAgronegocio" minOccurs="0" type="decimal"/>
+      <!--eduardo.rosell - 2016-09-05 - Inclusao dos campos para atender a tela de transportes em orcamento-->
+      <element name="codigoAbrangenciaImpressao" minOccurs="0" type="integer">
+        <annotation>
+          <documentation>
+            <regrasMapeamento>Este campo e gravado nas tabelas - clausula item versao orcamento e clausula versao orcamento</regrasMapeamento>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="numeroOrdemExibicao" minOccurs="0" type="long">
+        <annotation>
+          <documentation>
+            <regrasMapeamento>Este campo e gravado nas tabelas - clausula item versao orcamento, clausula versao orcamento e clausula embarque esporadico</regrasMapeamento>
+          </documentation>
+        </annotation>
+      </element>
+      <element name="flagAdendo" type="string" minOccurs="0">
+        <annotation>
+          <documentation>
+            <regrasMapeamento>Este campo e gravado nas tabelas - clausula item versao orcamento e clausula versao orcamento</regrasMapeamento>
+          </documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+</schema>

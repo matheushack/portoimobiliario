@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/cadastrosgeraisproduto/planoservicoebo/v1" version="1.0" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/cadastrosgeraisproduto/planoservicoebo/v1">
+  <xs:complexType name="ListaVinculoPlanoServicoEBO">
+    <xs:sequence>
+      <xs:element name="vinculoPlanoServicoEBO" type="VinculoPlanoServicoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VinculoPlanoServicoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade/>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoOferta" type="xs:long" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>plano servico versao oferta</entidade>
+            <atributo>codigo oferta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroVersaoOferta" type="xs:long" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>plano servico versao oferta</entidade>
+            <atributo>numero versao oferta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numeroSequenciaVersaoOferta" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>plano servico versao oferta</entidade>
+            <atributo>numero sequencia versao oferta</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoObjetoRisco" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>plano servico objeto risco versao oferta</entidade>
+            <atributo>codigo objeto risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCategoriaObjetoRisco" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>plano servico caracteristica objeto risco versao oferta</entidade>
+            <atributo>codigo categoria objeto risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCaracteristicaObjetoRisco" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>plano servico caracteristica objeto risco versao oferta</entidade>
+            <atributo>codigo caracteristica objeto risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeConteudoCaracteristica" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>plano servico caracteristica objeto risco versao oferta</entidade>
+            <atributo>nome conteudo caracteristica</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="planoServicoEBO" type="PlanoServicoEBO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaPlanoServicoEBO">
+    <xs:sequence>
+      <xs:element name="planoServicoEBO" type="PlanoServicoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PlanoServicoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>plano servico</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoPlanoServico" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo plano servico</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomePlanoServico" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>nome plano servico</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeConteudoCaracteristica" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <entidade>plano servico caracteristica objeto risco versao oferta</entidade>
+            <atributo>nome conteudo caracteristica</atributo>
+            <regrasMapeamento>somente para consulta relacionada a caracteristica do objeto</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

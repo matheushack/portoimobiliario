@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/admin/navioebo/v1" version="1.0" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portoseguro.com.br/ramoselementares/admin/navioebo/v1">
+  <xs:complexType name="ListaNavioEBO">
+    <xs:sequence>
+      <xs:element name="navio" maxOccurs="unbounded" minOccurs="0" type="NavioEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NavioEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao/>
+        <entidade>navio</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoNavio" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>codigo navio</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeNavio" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>nome navio</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="anoFabricacaoNavio" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>ano fabricacao navio</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="quantidadeTonelagemBruta" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>quantidade tonelagem bruta navio</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeSociedadeClassificadora" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>nome sociedade classificadora navio</atributo>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+            <regrasMapeamento/>
+            <descricao>Indica se o registro esta ativo ou inativo, uma vez que
+							nao havera delecao de registros em dados cadastrais. DOMiNIO: S -
+							Sim (ativo) N - Nao (inativo)</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaNavioEmpresa" minOccurs="0" type="ListaNavioEmpresaEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento/>
+            <descricao/>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaNavioEmpresaEBO">
+    <xs:sequence>
+      <xs:element name="navioEmpresa" maxOccurs="unbounded" minOccurs="0" type="NavioEmpresaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NavioEmpresaEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <descricao/>
+        <entidade>navio empresa</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoEmpresa" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Empresa</atributo>
+            <regrasMapeamento/>
+            <descricao>E o codigo da empresa.</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+            <regrasMapeamento/>
+            <descricao>Indica se o registro esta ativo ou inativo, uma vez que
+							nao havera delecao de registros em dados cadastrais. DOMiNIO: S -
+							Sim (ativo) N - Nao (inativo)</descricao>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

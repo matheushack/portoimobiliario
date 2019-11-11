@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.portoseguro.com.br/ramoselementares/emissao/itemdocumentoemissaotranspebo/v1" version="1.0" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pes="http://www.portoseguro.com.br/ramoselementares/pessoa/pessoaebo/v1" xmlns:moe="http://www.portoseguro.com.br/ramoselementares/administrativo/moedaebo/v1" xmlns:nav="http://www.portoseguro.com.br/ramoselementares/admin/navioebo/v1" xmlns:loc="http://www.portoseguro.com.br/ramoselementares/admin/localorigemdestinoebo/v1" xmlns="http://www.portoseguro.com.br/ramoselementares/emissao/itemdocumentoemissaotranspebo/v1">
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/pessoa/pessoaebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11_12_13.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/administrativo/moedaebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/admin/navioebo/v1"/>
+  <xs:import schemaLocation="DocumentoEmissaoServiceTokenEBSV1_0_1_2_3_4_5_6_7_8_9_10_11_12_13_14_15_16_17.xsd" namespace="http://www.portoseguro.com.br/ramoselementares/admin/localorigemdestinoebo/v1"/>
+  <xs:complexType name="ListaMercadoriaObjetoRiscoEBO">
+    <xs:sequence>
+      <xs:element name="listaMercadoriaObjetoRisco" type="MercadoriaObjetoRiscoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Eduardo Rosell - Inclusao da tabela de transportes-->
+  <xs:complexType name="MercadoriaObjetoRiscoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>Mercadoria Objeto Risco</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoMercadoriaObjeto" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Mercadoria Objeto Risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoAbrangenciaTransporte" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Abrangencia Transporte</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoMercadoria" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Mercadoria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoNomenclaturaBrasileiro" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Nomenclatura Brasileiro Mercadoria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoNomenclaturaComum" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Nomenclatura Comum Mercosul Mercadoria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoStatusCobertura" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Status Cobertura Mercadoria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Moeda" minOccurs="0" type="moe:MoedaEBO"/>
+      <xs:element name="codigoTipoAtualizacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Atualizacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorLimiteMercadoria" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Limite Mercadoria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualTransporteMercadoria" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Percentual Transporte Mercadoria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaEmbarqueAverbarObjetoRiscoEBO">
+    <xs:sequence>
+      <xs:element name="listaEmbarqueAverbarObjetoRisco" type="EmbarqueAverbarObjetoRiscoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Eduardo Rosell - Inclusao da tabela de transportes-->
+  <xs:complexType name="EmbarqueAverbarObjetoRiscoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>Embarque Averbar Objeto Risco</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoEmbarqueAverbar" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Embarque Averbar</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoAbrangenciaTransporte" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Abrangencia Transporte</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoOperacaoInternacional" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Operacao Internacional</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoTransporte" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Transporte</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoOpercaoCargaDescarga" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Operacao Carga Descarga</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoOpercaoCargaDescargaEspecial" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Operacao Carga Descarga Especial</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualLucroEsperado" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Percentual Lucro Esperado</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoAtualizacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Atualizacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoAplicacaoPremioMinimo" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Aplicacao Premio Minimo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaEmbarqueAvulsoObjetoRiscoEBO">
+    <xs:sequence>
+      <xs:element name="listaEmbarqueAvulsoObjetoRisco" type="EmbarqueAvulsoObjetoRiscoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Eduardo Rosell - Inclusao da tabela de transportes-->
+  <xs:complexType name="EmbarqueAvulsoObjetoRiscoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>Embarque Avulso Objeto Risco</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoEmbarqueAvulso" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Embarque Avulso</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoAbrangenciaTransporte" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Abrangencia Transporte</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoOperacaoInternacional" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Operacao Internacional</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoTransporte" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Transporte</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Navio" minOccurs="0" type="nav:NavioEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>buscar pelo campo Codigo Navio</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoPaisOrigem" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Pais Origem</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoUnidadeFederacaoOrigem" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Unidade Federacao Origem</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCidadeOrigem" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Cidade Origem</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeCidadeOrigem" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Nome Cidade Origem</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LocalOrigemTransporte" minOccurs="0" type="loc:LocalOrigemDestinoEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>buscar pelo campo Codigo Local Origem Transporte</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoPaisDestino" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Pais Destino</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoUnidadeFederacaoDestino" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Unidade Federacao Destino</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCidadeDestino" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Cidade Destino</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeCidadeDestino" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Nome Cidade Destino</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LocalDestinoTransporte" minOccurs="0" type="loc:LocalOrigemDestinoEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>usar o campo Codigo Local Destino Transporte para localizar</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagPossuiTransbordo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Possui Transbordo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataTransbordo" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Data Transbordo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoPaisTransbordo" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Pais Transbordo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoUnidadeFederacaoTransbordo" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Unidade Federacao Transbordo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoCidadeTransbordo" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Cidade Transbordo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeCidadeTransbordo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Nome Cidade Transbordo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeSubdivisaoPaisTransbordo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Nome Subdivisao Pais Transbordo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoNavioTransbordo" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Navio Transbordo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Moeda" minOccurs="0" type="moe:MoedaEBO"/>
+      <xs:element name="dataSaida" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Data Saida</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorMercadoria" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Mercadoria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorFreteEmbarque" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Frete Embarque</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorDespesa" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Despesa</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorLucroEsperado" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Lucro Esperado</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorIpi" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Ipi</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorImpostoCirculacao" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Imposto Circulacao Mercadoria Servico</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorProgramaIntegracaoSocial" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Programa Integracao Social</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorCofins" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Cofins</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorImpostoImportacao" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Imposto Importacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualIpi" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Percentual Ipi</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualImpostoCirculacao" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Percentual Imposto Circulacao Mercadoria Servico</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualProgramaIntegracaoSocial" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Percentual Programa Integracao Social</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualCofins" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Percentual Cofins</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualImpostoImportacao" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Percentual Imposto Importacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataTaxaConversaoMoeda" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Data Taxa Conversao Moeda</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorTaxaConversaoMoeda" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Taxa Conversao Moeda</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="textoComentario" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Texto Comentario</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeSubdivisaoPaisOrigem" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Nome Subdivisao Pais Origem</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="nomeSubdivisaoPaisDestino" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Nome Subdivisao Pais Destino</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoLocalTransbordo" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Local Transbordo Transporte</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorFreteEmbarqueMoedaNegociada" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Frete Embarque Moeda Negociada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualFreteEmbarque" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Percentual Frete Embarque</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorDespesaMoedaNegociada" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Despesa Moeda Negociada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualDespesa" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Percentual Despesa</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorLucroEsperadoMoedaNegociada" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Lucro Esperado Moeda Negociada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="percentualLucroEsperado" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Percentual Lucro Esperado</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorImpostoImportacaoMoedaNegociada" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Imposto Importacao Moeda Negociada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorIpiMoedaNegociada" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Ipi Moeda Negociada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorImpostoCirculacaoMoedaNegociada" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Icms Moeda Negociada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorProgramaIntegracaoSocialMoedaNegociada" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Pis Moeda Negociada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorCofinsMoedaNegociada" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Cofins Moeda Negociada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorSeguroMoedaNegociada" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Seguro Moeda Negociada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorSeguro" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Seguro</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorMercadoriaMoedaNegociada" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Mercadoria Moeda Negociada</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaEmbarcadorObjetoRiscoEBO">
+    <xs:sequence>
+      <xs:element name="listaEmbarcadorObjetoRisco" type="EmbarcadorObjetoRiscoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Eduardo Rosell - Inclusao da tabela de transportes-->
+  <xs:complexType name="EmbarcadorObjetoRiscoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>Embarcador Objeto Risco</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoEmbarcador" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Embarcador Objeto Risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="pessoaEmbarcador" minOccurs="0" type="pes:PessoaEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Pessoa Embarcador</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoStatusCoberturaMercadoria" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Status Cobertura Mercadoria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Moeda" minOccurs="0" type="moe:MoedaEBO"/>
+      <xs:element name="codigoTipoAtualizacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Atualizacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="valorLimite" minOccurs="0" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Valor Limite Embarcador</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataInicioVigencia" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Data Inicio Vigencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimVigencia" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Data Fim Vigencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAdendo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Adendo</atributo>
+            <regrasMapeamento>Campo que identifica se o embarcador é do adendo ou objeto (S ou N)</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="textoComentario" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Texto Comentario</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="listaAlertasFimVigencia" minOccurs="0" type="ListaAlertaFimVigenciaEBO"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaTransportadorObjetoRiscoEBO">
+    <xs:sequence>
+      <xs:element name="listaTransportadorObjetoRisco" type="TransportadorObjetoRiscoEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Eduardo Rosell - Inclusao da tabela de transportes-->
+  <xs:complexType name="TransportadorObjetoRiscoEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>Transportador Objeto Risco</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoTransportador" minOccurs="0" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Transportador Objeto Risco</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PessoaTransportador" minOccurs="0" type="pes:PessoaEBO">
+        <xs:annotation>
+          <xs:documentation>
+            <regrasMapeamento>usar o campo Codigo Pessoa Transportador para buscar PessoaEBO</regrasMapeamento>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoStatusCoberturaMercadoria" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Status Cobertura Mercadoria</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="codigoTipoAtualizacao" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Codigo Tipo Atualizacao</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataInicioVigencia" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Data Inicio Vigencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataFimVigencia" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Data Fim Vigencia</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAtivo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Ativo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="flagAdendo" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Flag Adendo</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="textoComentario" minOccurs="0" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>Texto Comentario</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListaAlertaFimVigenciaEBO">
+    <xs:sequence>
+      <xs:element name="alertaFimVigencia" type="AlertaFimVigenciaEBO" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AlertaFimVigenciaEBO">
+    <xs:annotation>
+      <xs:documentation>
+        <entidade>alerta fim vigencia embarcador objeto risco</entidade>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="numeroSequenciaAlertaFim" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>numero sequencia alerta fim vigencia embarcador</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="dataAlertaFim" minOccurs="0" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>data alerta fim vigencia embarcador</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="quantidadeDiaAlertaFim" minOccurs="0" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>
+            <atributo>quantidade dia alerta fim vigencia embarcador</atributo>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
