@@ -9,34 +9,52 @@
 namespace MatheusHack\PortoImobiliario\Factories\PpwEmissaoImobiliaria;
 
 use Cake\Utility\Xml;
+use MatheusHack\PortoImobiliario\Entities\PortoResponse;
 use MatheusHack\PortoImobiliario\Requests\PpwEmissaoImobiliaria\ExecutarCalculoProdutoRequest;
 
+/**
+ * Class ExecutarCalculoProdutoFactory
+ * @package MatheusHack\PortoImobiliario\Factories\PpwEmissaoImobiliaria
+ */
 class ExecutarCalculoProdutoFactory
 {
-    public function request(ExecutarCalculoProdutoRequest $request)
+	/**
+	 * @param ExecutarCalculoProdutoRequest $request
+	 * @return array
+	 */
+	public function request(ExecutarCalculoProdutoRequest $request)
     {
-        $calculo = $request->getDocumento()
-                ->getCalculo()
-                ->toArray();
-
-        $xmlContent = Xml::fromArray(['documento' => $calculo], [
-            'enconding' => null,
-            'return' => 'domdocument'
-        ]);
-
-        dd($xmlContent);
-
-        $cdata = new \SoapVar($xmlContent, XSD_STRING);
+        $body = Xml::fromArray([
+        	'documento' => [
+        		'calculo' => $request->getDocumento()
+					->getCalculo()
+					->toArray()
+			]
+		])->asXML();
 
         return [
             'executarCalculoProdutoRequest' => [
-                'executarCalculoProdutoRequest' => $cdata
-            ]
-        ];
+                'executarCalculoProdutoRequest' => $body
+			]
+		];
     }
 
-    public function response($response)
+	/**
+	 * @param $response
+	 * @return PortoResponse
+	 * @throws \Exception
+	 */
+	public function response($response)
     {
-        dd($response);
+		if(!$response->executarCalculoProdutoReturn)
+			throw new \Exception('Não obteve retorno do webservice da Porto Seguro');
+
+		$response = Xml::toArray(Xml::build($response->executarCalculoProdutoReturn));
+
+		if(!empty($response['retornoCalculo']['coderro']))
+			throw new \Exception($response['retornoCalculo']['aceitacao']['mensagem']);
+
+		return (new PortoResponse)->setSuccess(true)
+			->setData(json_decode(json_encode($response['retornoCalculo'])));
     }
 }

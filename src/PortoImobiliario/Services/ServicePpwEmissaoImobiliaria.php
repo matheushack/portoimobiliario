@@ -26,7 +26,11 @@ class ServicePpwEmissaoImobiliaria extends Client
         parent::__construct(getenv('PORTO_IMOBILIARIA_PPW_EMISSAO_WSDL'));
     }
 
-    public function executarCalculoProduto(ExecutarCalculoProdutoRequest $request)
+	/**
+	 * @param ExecutarCalculoProdutoRequest $request
+	 * @return PortoResponse
+	 */
+	public function executarCalculoProduto(ExecutarCalculoProdutoRequest $request)
     {
         $executarCalculoProduto = new ExecutarCalculoProdutoFactory();
 

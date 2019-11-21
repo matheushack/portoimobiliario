@@ -1,0 +1,1528 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: mhssilva
+ * Date: 21/11/19
+ * Time: 16:24
+ */
+
+namespace MatheusHack\PortoImobiliario\Constants;
+
+
+/**
+ * Class AtividadeEconomica
+ * @package MatheusHack\PortoImobiliario\Constants
+ */
+class AtividadeEconomica
+{
+	/**
+	 *
+	 */
+	const ATIVIDADE_ESPECIAL = 1;
+
+	/**
+	 *
+	 */
+	const ABRASIVOS_FABRICAS_COM_OU_SEM_INFLAM = 2;
+
+	/**
+	 *
+	 */
+	const ACADEMIA_DE_GINASTICA_DANCAS_LUTAS_ESCOLA_DE_NATACAO_OU_ESPORTES = 3;
+
+	/**
+	 *
+	 */
+	const ACOUGUE_PEIXARIA = 4;
+
+	/**
+	 *
+	 */
+	const ACUCAR_DEPOSITOS = 5;
+
+	/**
+	 *
+	 */
+	const AG_BANCARIAS_LOJAS_OU_COOP_DE_CREDITO_CASAS_DE_CAMBIO = 6;
+
+	/**
+	 *
+	 */
+	const AG_TURISMO_EXCLUINDO_CAMBIO_DE_VALORES_TERREO_OU_SOBR = 7;
+
+	/**
+	 *
+	 */
+	const AG_TURISMO_OU_VIAGENS_EXCLUINDO_CAMBIO_DE_VALORES_PRIMEIRO_ANDAR = 8;
+
+	/**
+	 *
+	 */
+	const BEBIDAS_NAO_ALCOOL_DEPOSITO_OU_LOJA = 9;
+
+	/**
+	 *
+	 */
+	const BEBIDAS_NAO_ALCOOL_FABRICAS_ENGARRAFAM = 10;
+
+	/**
+	 *
+	 */
+	const ANUNCIOS_LUMINOSOS_LETREIROS_OU_PAINEIS_FABRICA_E_OU_OFICINAS = 11;
+
+	/**
+	 *
+	 */
+	const ANTIGUIDADES_LOJAS_DE = 12;
+
+	/**
+	 *
+	 */
+	const APARELHOS_ORTOPEDICOS_DEPOSITO_OU_LOJ = 13;
+
+	/**
+	 *
+	 */
+	const ARMARINHOS_DEPOSITOS_SEM_VENDAS = 14;
+
+	/**
+	 *
+	 */
+	const ARMARINHOS_LOJAS = 15;
+
+	/**
+	 *
+	 */
+	const ARTIGOS_P_PRESENTES_ARMARINHOS_ARTIGOS_D = 16;
+
+	/**
+	 *
+	 */
+	const ARMAS_LOJAS_OU_DEPOSITOS_ = 17;
+
+	/**
+	 *
+	 */
+	const ARMAS_FABRICAS = 18;
+
+	/**
+	 *
+	 */
+	const ARROZ_DEPOSITO_C_BENEF_S_PROCESSO_DE_D = 19;
+
+	/**
+	 *
+	 */
+	const ARTIGOS_RELIGIOSOS_EXCLUIDO_MATERIAIS_EXPLOSIVOS = 20;
+
+	/**
+	 *
+	 */
+	const ASILOS_CASA_DE_REPOUSO_CLINICAS_PARA_TRA = 21;
+
+	/**
+	 *
+	 */
+	const AUTOMOVEIS_EXCLUISIVAMENTE_LOCACAO = 22;
+
+	/**
+	 *
+	 */
+	const AUTOMOVEIS_EXCLUSIVAMENTE_CONCESSIONARI = 23;
+
+	/**
+	 *
+	 */
+	const AUTOMOVEIS_LOJA_DEPOSITO_EXCLUIDO_MOTOS = 24;
+
+	/**
+	 *
+	 */
+	const AUTOMOVEIS_OFICINA_MEC_FUNILARIA_ELETRIC = 25;
+
+	/**
+	 *
+	 */
+	const AUTOMOVEIS_COMPONENTES_OU_ACESSORIOS_LO = 26;
+
+	/**
+	 *
+	 */
+	const AVICOLAS_LOJA_EXCLUINDO_ABATEDOURO = 27;
+
+	/**
+	 *
+	 */
+	const AVICULTURA_DEPOSITOS_OU_LOJAS = 28;
+
+	/**
+	 *
+	 */
+	const BANHA_DEPOSITOS_E_LOJAS = 29;
+
+	/**
+	 *
+	 */
+	const BAR_BOTEQUIM_LANCHONETE_E_PASTELARIA = 30;
+
+	/**
+	 *
+	 */
+	const SALAO_DE_BUFFET = 31;
+
+	/**
+	 *
+	 */
+	const BEBIDAS_DEPOSITOS_SEM_VENDA = 32;
+
+	/**
+	 *
+	 */
+	const BEBIDAS_DEPOSITOS_COM_VENDA_DISTRIBUI = 33;
+
+	/**
+	 *
+	 */
+	const BEBIDAS_LOJAS_DEPOSITOS = 34;
+
+	/**
+	 *
+	 */
+	const BEBIDAS_ALCOOLICAS_FABRICAS = 35;
+
+	/**
+	 *
+	 */
+	const BICICLETAS_DEPSSITOS_LOJA_PERMITINDO_O = 36;
+
+	/**
+	 *
+	 */
+	const BIJOUTERIAS_FABRICAS_EXCLUINDO_METAIS_ARTEFATOS_JOIAS_PEDRAS_PREC_SEMI = 37;
+
+	/**
+	 *
+	 */
+	const BIJOUTERIAS_LOJA_DEP_EXCLUINDO_METAIS_ARTEFATOS_S_PREC_SEMIPRECIOSOS = 38;
+
+	/**
+	 *
+	 */
+	const BILHARES_OU_BOLICHES_SALOES = 39;
+
+	/**
+	 *
+	 */
+	const BOLSAS_CINTOS_MALAS_OU_SIMILARES_LOJA_DEPOSITO = 40;
+
+	/**
+	 *
+	 */
+	const BOLSAS_CINTOS_MALAS_OU_CONGENERES_DE = 41;
+
+	/**
+	 *
+	 */
+	const BOLSAS_CINTOS_MALAS_OU_SIMILARES_FABRICA = 42;
+
+	/**
+	 *
+	 */
+	const BORRACHEIRO_SEM_RECAUCHUTAGEM = 43;
+
+	/**
+	 *
+	 */
+	const BORRACHA_LOJA_OU_DEPOSITO_DE_ARTIGOS = 44;
+
+	/**
+	 *
+	 */
+	const BORRACHA_FABRICA_DE_ARTIGOS = 45;
+
+	/**
+	 *
+	 */
+	const BOTOES_FABRICA_EXCLUIDO_DE_MADEIRA = 46;
+
+	/**
+	 *
+	 */
+	const BRINQUEDOS_FABRICA_DE_SEM_EMPREGO_DE = 47;
+
+	/**
+	 *
+	 */
+	const BRINQUEDOS_LOJAS_OU_DEPOSITOS = 48;
+
+	/**
+	 *
+	 */
+	const CABELEIREIROS_SALAO_DE_BELEZA_E_OU_ESTETICA = 49;
+
+	/**
+	 *
+	 */
+	const CAFE_DEPOSITO_S_VENDA_INCLUSIVE_BENEF = 50;
+
+	/**
+	 *
+	 */
+	const CAFE_DEPOSITO_C_VENDA_INCLUSIVE_BENEF = 51;
+
+	/**
+	 *
+	 */
+	const CALCADOS_FABRICA = 52;
+
+	/**
+	 *
+	 */
+	const CALCADOS_DEPOSITOS_OU_LOJAS = 53;
+
+	/**
+	 *
+	 */
+	const CALCADOS_SAPATEIRO_OFICINA = 54;
+
+	/**
+	 *
+	 */
+	const CARIMBOS_CHAVEIROS_DEPOSITOS_OU_LOJAS = 55;
+
+	/**
+	 *
+	 */
+	const CARIMBOS_FABRICAS_OU_OFICINAS = 56;
+
+	/**
+	 *
+	 */
+	const CARTORIOS = 57;
+
+	/**
+	 *
+	 */
+	const CASAS_DE_BANHO_SAUNAS = 58;
+
+	/**
+	 *
+	 */
+	const HOTEIS_MOTEIS_POUSADAS = 59;
+
+	/**
+	 *
+	 */
+	const CHAVEIRO = 60;
+
+	/**
+	 *
+	 */
+	const CEMITERIOS_VELORIOS_CREMATORIOS = 61;
+
+	/**
+	 *
+	 */
+	const CIMENTO_DEPOSITO_OU_LOJAS_DE_ARTIGOS_D = 62;
+
+	/**
+	 *
+	 */
+	const CIMENTO_GESSO_FABRICA_DE_ARTIGOS = 63;
+
+	/**
+	 *
+	 */
+	const CIMENTO_DEPOSITO_OU_LOJA_DE_CIMENTO = 64;
+
+	/**
+	 *
+	 */
+	const CIRURG_HOSPIT_DENT_ORTOP_ART_EXCETO_MEDICAMENTO_EQP_ELETR_DEP_LOJA = 65;
+
+	/**
+	 *
+	 */
+	const CIRURGICOS_HOSPITALARES_OU_DENTARIOS = 66;
+
+	/**
+	 *
+	 */
+	const COLCHOES_DEPOSITOS_OU_LOJAS_SEM_OFICIN = 67;
+
+	/**
+	 *
+	 */
+	const CLUBE_RECREATIVO = 68;
+
+	/**
+	 *
+	 */
+	const CONFEITARIA = 69;
+
+	/**
+	 *
+	 */
+	const POLAS_ENVASAMENTO_E_EMBALAGEM = 70;
+
+	/**
+	 *
+	 */
+	const COLCHOES_FABRICA_DE = 71;
+
+	/**
+	 *
+	 */
+	const CONSERVAS_ALIMENTICIAS_DE_ORIGEM_VEGETAL_DEPOSITOS_OU_LOJAS = 72;
+
+	/**
+	 *
+	 */
+	const CONSERVAS_ALIMENTICIAS_DE_ORIGEM_VEGETAL_FABRICAS = 73;
+
+	/**
+	 *
+	 */
+	const CONSULTORIO_CLINICA_MEDICA_OU_DENTARIA = 74;
+
+	/**
+	 *
+	 */
+	const CONSULTORIO_CLINICA_MEDICA_OU_DENTARIA_A_PARTIR_DO_1_ANDAR = 75;
+
+	/**
+	 *
+	 */
+	const CONVENTOS_MOSTEIROS = 76;
+
+	/**
+	 *
+	 */
+	const COPIADORA_PERMITINDO_SE_ENCADERNACAO_PLASTIFICACAO_E_OUTROS_INERENTES = 77;
+
+	/**
+	 *
+	 */
+	const CORDOARIA_CORDAS_CORDOES_DEPOSITO = 78;
+
+	/**
+	 *
+	 */
+	const CORDOARIA_CORDAS_CORDOES_FABRICAS = 79;
+
+	/**
+	 *
+	 */
+	const CORREIOS_ENCOMENDAS_EXPRESSAS_EXCLUIND = 80;
+
+	/**
+	 *
+	 */
+	const COUROS_OU_PELES_DEPOSITO_OU_LOJAS_DE_A = 81;
+
+	/**
+	 *
+	 */
+	const COUROS_OU_PELES_FABRICA_DE_ARTIGOS_SEM = 82;
+
+	/**
+	 *
+	 */
+	const DEFENSIVOS_AGRICOLAS_LOJA_DEPOSITO_EXCLUI_SEMENTES = 83;
+
+	/**
+	 *
+	 */
+	const DESOCUPADO_IMOVEL_COMERCIAL_INDUSTRIAL = 84;
+
+	/**
+	 *
+	 */
+	const DESPACHANTES_ESCRITORIO = 85;
+
+	/**
+	 *
+	 */
+	const DESENTUPIDORA = 86;
+
+	/**
+	 *
+	 */
+	const CDS_DVDS_E_SIMILARES_LOJAS = 87;
+
+	/**
+	 *
+	 */
+	const DIVERSOES_ELETRONICAS = 88;
+
+	/**
+	 *
+	 */
+	const DOCES_BALAS_CHOCOLATES_E_SIMILARES_FABRICA = 89;
+
+	/**
+	 *
+	 */
+	const DOCES_BALAS_CHOCOLATES_E_SIMILARES_LOJAS_DEPOSITOS = 90;
+
+	/**
+	 *
+	 */
+	const ELETRICOS_ILUMINACAO_OU_ELETRICIDADE_DEPOSITO_LOJAS_DE_ARTIGOS = 91;
+
+	/**
+	 *
+	 */
+	const ELETRODOMESTICOS_LOJAS_DEPOSITOS = 92;
+
+	/**
+	 *
+	 */
+	const ELETRODOMESTICOS_OFICINA_DE_CONSERTO = 93;
+
+	/**
+	 *
+	 */
+	const ELETROELET_LOJA_DEP_C_OFICINA = 94;
+
+	/**
+	 *
+	 */
+	const ELETROELETRONICOS_FABRICAS_DE_PECAS_E = 95;
+
+	/**
+	 *
+	 */
+	const EMBARCACOES_LOJA_DEPOSITO_SEM_VENDA_DE_MOTORES_DE_POPA = 96;
+
+	/**
+	 *
+	 */
+	const EMPRESAS_DE_ONIBUS_E_OU_TAXIS = 97;
+
+	/**
+	 *
+	 */
+	const EQUIP_PROTECAO_INDIVIDUAL_EPI_LOJAS_DEPOSITO = 98;
+
+	/**
+	 *
+	 */
+	const ENCOMENDAS_EXPRESSAS_TERREO = 99;
+
+	/**
+	 *
+	 */
+	const ENCOMENDAS_EXPRESSAS_A_PARTIR_1_ANDAR = 100;
+
+	/**
+	 *
+	 */
+	const ESCOLAS_PUBLICAS_ESTADUAIS_MUNICIPAIS = 101;
+
+	/**
+	 *
+	 */
+	const ESCOLAS_PARTICULARES_E_OU_FILANTROPICAS = 102;
+
+	/**
+	 *
+	 */
+	const ESCOLAS_PARTICULARES_E_OU_FILANTROPICAS_ = 103;
+
+	/**
+	 *
+	 */
+	const ESCRITORIOS_DEMAIS_TERREO_SOBRADOS_EXC = 104;
+
+	/**
+	 *
+	 */
+	const ESCRITORIOS_DEMAIS_A_PARTIR_PRIMEIRO_AND = 105;
+
+	/**
+	 *
+	 */
+	const ESCRITORIOS_DE_SERV_INFORMATICA_OU_PUBLIC_TERREO_OU_SOBRADO = 106;
+
+	/**
+	 *
+	 */
+	const ESCRITORIOS_DE_SERV_INFOR_OU_PUBLIC_A_P = 107;
+
+	/**
+	 *
+	 */
+	const ESTACIONAMENTO_E_OU_LAVA_RAPIDO_SEM_OFI = 108;
+
+	/**
+	 *
+	 */
+	const ESPORTE_ARTIGOS_DE_LOJA_DEPOSITO_EXCLUINDO_ARMAS_DE_FOGO = 109;
+
+	/**
+	 *
+	 */
+	const ESTACAO_RETRANSMISSORA_DE_RADIO_OU_TELEVISAO_TORRE_DE_RETRANSMISSAO = 110;
+
+	/**
+	 *
+	 */
+	const EXTINTORES_LOJA_DEPOSITO_PERMITINDO_OFI = 111;
+
+	/**
+	 *
+	 */
+	const ESTUDIO_FOTOGRAFICO_E_OU_DE_GRAVACAO_SOM_E_IMAGEM = 112;
+
+	/**
+	 *
+	 */
+	const FARINHAS_DEPOSITOS_OU_LOJAS = 113;
+
+	/**
+	 *
+	 */
+	const EXPOSICOES_CONVENCOES_CENTRO_DE_EXCLUINDO_BENS_DE_TERCEIROS = 114;
+
+	/**
+	 *
+	 */
+	const FARMACIAS_OU_DROGARIAS_DEPOSITOS = 115;
+
+	/**
+	 *
+	 */
+	const FARMACIAS_OU_DROGARIAS_LOJAS = 116;
+
+	/**
+	 *
+	 */
+	const FARMACEUTICOS_PRODUTOS_FABRICA = 117;
+
+	/**
+	 *
+	 */
+	const FERRAGENS_OU_FERRAMENTAS_SEM_VENDA_DE_MATERIAL_DE_CONST_LOJA_DEPOSITO = 118;
+
+	/**
+	 *
+	 */
+	const FLORES_PLANTAS_NATURAIS_LOJAS_EXCLUINDO_VIVEIRO_ESTUFA = 119;
+
+	/**
+	 *
+	 */
+	const FLORES_ARTIFICIAIS_FABRICA_OU_LOJAS = 120;
+
+	/**
+	 *
+	 */
+	const ESTUDIO_FOTOGRAFICO_FOTOGRAFO_LABORATO = 121;
+
+	/**
+	 *
+	 */
+	const FOTOGRAFICO_DEPOSITO_OU_LOJA_DE_ARTIGO = 122;
+
+	/**
+	 *
+	 */
+	const FRIGORIFICO_MERC_EM_CAMARAS_DE_REFRIG = 123;
+
+	/**
+	 *
+	 */
+	const EMBUTIDOS_SEM_MATADOURO_FABRICA = 124;
+
+	/**
+	 *
+	 */
+	const FRUTAS_DEPOSITOS_OU_LOJAS = 125;
+
+	/**
+	 *
+	 */
+	const FUMOS_CHARUTOS_CIGARROS_LOJAS_PERMITINDO_SE_ART_P_FUMANTES = 126;
+
+	/**
+	 *
+	 */
+	const FUNEBRES_ARTIGOS_S_OFICINA_ESTOFAMENTO = 127;
+
+	/**
+	 *
+	 */
+	const FUNEBRES_LOJAS_C_OFIC_DE_ARMADORES_S = 128;
+
+	/**
+	 *
+	 */
+	const GELO_FAB_DEP_OU_LOJAS = 129;
+
+	/**
+	 *
+	 */
+	const GRAFICAS_OU_TIPOGRAFIAS_COM_OU_SEM_ROTO = 130;
+
+	/**
+	 *
+	 */
+	const GUARDA_CHUVAS_GUARDA_SOIS_OU_BENGALAS = 131;
+
+	/**
+	 *
+	 */
+	const GUARDA_CHUVAS_GUARDA_SOIS_OU_BENGALAS_2 = 132;
+
+	/**
+	 *
+	 */
+	const HOSPITAIS = 133;
+
+	/**
+	 *
+	 */
+	const IGREJAS_MOSTEIROS_CONVENTOS = 134;
+
+	/**
+	 *
+	 */
+	const IMOB_CORRET_E_ADM_DE_IMOVEIS_TERRE = 135;
+
+	/**
+	 *
+	 */
+	const INSTRUMENTOS_MUSICAIS_LOJA_DEPOSITO = 136;
+
+	/**
+	 *
+	 */
+	const INFORMATICA_ELETROELETRONICO_FABRICA_OU_MONTAGEM_DE_PECAS_EQUIP = 137;
+
+	/**
+	 *
+	 */
+	const INFORMATICA_PROVEDORES_DE_INTERNET = 138;
+
+	/**
+	 *
+	 */
+	const JOIAS_FABRICA_DE = 139;
+
+	/**
+	 *
+	 */
+	const JOIAS_COM_OU_SEM_OFICINA_LOJA_DE = 140;
+
+	/**
+	 *
+	 */
+	const INFORMATICA_ELETROELETRONICO_LOJA_DEPOSI = 141;
+
+	/**
+	 *
+	 */
+	const JOIAS_FABRICA_DE_PREDIO_E_MAQUINISMO = 142;
+
+	/**
+	 *
+	 */
+	const JOIAS_COM_OU_SEM_OFICINA_LOJA_DE_PRED = 143;
+
+	/**
+	 *
+	 */
+	const KARTODROMO = 144;
+
+	/**
+	 *
+	 */
+	const LAB_ANALISE_CLINICAS_QUIMICAS_OU_FARMA = 145;
+
+	/**
+	 *
+	 */
+	const LADRILHOS_OU_CERAMICAS_FABRICA_DE = 146;
+
+	/**
+	 *
+	 */
+	const LATICINIOS_LOJAS_DEPOSITOS = 147;
+
+	/**
+	 *
+	 */
+	const LATICINIOS_FABRICA = 148;
+
+	/**
+	 *
+	 */
+	const LAN_HOUSE_CYBER_CAFE_EXCLUSIVAMENTE_EM = 149;
+
+	/**
+	 *
+	 */
+	const LAN_HOUSE_CYBER_CAFE_FORA_DE_SHOPPING_CENTERS_OU_HIPERMERCADOS = 150;
+
+	/**
+	 *
+	 */
+	const LAVANDERIAS_SEM_TINTURARIA_EXCETO_INDUSTRIAL = 151;
+
+	/**
+	 *
+	 */
+	const LIMPEZA_LOJA_OU_DEPOSITO_DE_ARTIGOS_DE = 152;
+
+	/**
+	 *
+	 */
+	const LIMPEZA_FABRICA_DE_ARTIGOS_DE = 153;
+
+	/**
+	 *
+	 */
+	const LIVROS_REVISTAS_JORNAIS_CDS_E_DVDS_LOJA_DEPOSITO_S_BANCA_DE_JORNAL = 154;
+
+	/**
+	 *
+	 */
+	const LOCADORA = 155;
+
+	/**
+	 *
+	 */
+	const SHOPPINGS_LOJAS_EM_ENQUADR_P_ATIVI = 156;
+
+	/**
+	 *
+	 */
+	const LONA_FABRICAS_DE_ARTIGOS_DE = 157;
+
+	/**
+	 *
+	 */
+	const LONA_ARTIGOS_DE_LOJA = 158;
+
+	/**
+	 *
+	 */
+	const LOTERICAS = 159;
+
+	/**
+	 *
+	 */
+	const LOUCAS_PORCELANAS_LADRILHOS_CERAMICAS_E = 160;
+
+	/**
+	 *
+	 */
+	const LUSTRES_DEPOSITOS_OU_LOJAS = 161;
+
+	/**
+	 *
+	 */
+	const LUSTRES_FABRICA = 162;
+
+	/**
+	 *
+	 */
+	const MADEIRA_LOJA_DEPOSITO = 163;
+
+	/**
+	 *
+	 */
+	const MARCENARIA_CARPINTARIA = 164;
+
+	/**
+	 *
+	 */
+	const MARMORARIA = 165;
+
+	/**
+	 *
+	 */
+	const MAQ_ELETROMECANICAS_COMERCIAIS_INDRUTRIAIS_LOJA_DEPOSITO = 166;
+
+	/**
+	 *
+	 */
+	const MARMORE_GRANITO_LOJA_DEPOSITO_PERMITINDO_FABRICACAO_DE_ARTIGOS = 167;
+
+	/**
+	 *
+	 */
+	const MASSAS_ALIMENTICIAS_FABRICAS_OU_LOJAS = 168;
+
+	/**
+	 *
+	 */
+	const MATERIAL_PARA_CONSTRUCAO_LOJA_DEPOSITO = 169;
+
+	/**
+	 *
+	 */
+	const MEIAS_FABRICA_DE = 170;
+
+	/**
+	 *
+	 */
+	const MEIAS_DEPOSITOS_E_OU_LOJAS_DE = 171;
+
+	/**
+	 *
+	 */
+	const METAL_FABRICA_DE_FERRO_OU_ACO_EM_BLOCO = 172;
+
+	/**
+	 *
+	 */
+	const METAL_EXCLUINDO_DE_PRECIOSO_SEMIPRECIOSO_E_SUCATAS_DEPOSITO = 173;
+
+	/**
+	 *
+	 */
+	const METAL_EXCLUINDO_PRECIOSO_SEMIPRECIOSO_E_SUCATAS_FAB_DE_ART_E_MAQ = 174;
+
+	/**
+	 *
+	 */
+	const MOLDURAS_DEPOSITO_OU_LOJA_COM_OU_SEM_OF = 175;
+
+	/**
+	 *
+	 */
+	const MOLDURAS_SEM_OFICINA_LOJA_DEPOSITO = 176;
+
+	/**
+	 *
+	 */
+	const MOTOCICLETAS_EXCLUSIVAMENTE_CONCESSIONA = 177;
+
+	/**
+	 *
+	 */
+	const MOVEIS_COM_OFICINA_LOJA_DEPOSITO = 178;
+
+	/**
+	 *
+	 */
+	const MOVEIS_SEM_OFICINA_LOJA_DEPOSITO = 179;
+
+	/**
+	 *
+	 */
+	const MOVEIS_FABRICA_COM_ESTOFAMENTO = 180;
+
+	/**
+	 *
+	 */
+	const MOVEIS_FABRICA_SEM_ESTOFAMENTO = 181;
+
+	/**
+	 *
+	 */
+	const ONGSS_ENTIDADES_FILANTROPICAS = 182;
+
+	/**
+	 *
+	 */
+	const MAQ_ELETROMEC_COMERC_E_INDUSTRIAIS_OFICINAS = 183;
+
+	/**
+	 *
+	 */
+	const OLEOS_VEGETAIS_DEPOSITOS_OU_LOJAS_DE = 184;
+
+	/**
+	 *
+	 */
+	const FABRICA = 185;
+
+	/**
+	 *
+	 */
+	const OTICA_LOJA_DEPOSITO = 186;
+
+	/**
+	 *
+	 */
+	const PADARIAS_CONFEITARIAS = 187;
+
+	/**
+	 *
+	 */
+	const PAPEL_LOJA_OU_DEPOSITO_EXCLUIDO_DEPOSITO_DE_DOCUMENTOS_ARTIGOS_DE = 188;
+
+	/**
+	 *
+	 */
+	const PAPEL_PAPELAO_FAB_DE_ART_S_PROC_RECICLAGEM_E_OU_UTILIZ_APARAS_SUCATA = 189;
+
+	/**
+	 *
+	 */
+	const VEDACOES_FABRICAS_EXCLUSIVAMENTE_METAL = 190;
+
+	/**
+	 *
+	 */
+	const PEIXARIA = 191;
+
+	/**
+	 *
+	 */
+	const PERFUMARIA_COSMETICOS_LOJA_DEPOSITO = 192;
+
+	/**
+	 *
+	 */
+	const PERFUMARIA_COSMETICOS_S_FABRICACAO_DE_SABONETES_OU_VERNIZ_FABRICA = 193;
+
+	/**
+	 *
+	 */
+	const PLASTICOS_SEM_CELULOIDE_DEPOSITO_OU_LOJA_EXCLUINDO_SUCATAS = 194;
+
+	/**
+	 *
+	 */
+	const PLASTICOS_SEM_CELULOIDE_FABRICA_DE_ARTIGOS_EXCLUINDO_SUCATAS = 195;
+
+	/**
+	 *
+	 */
+	const PET_SHOP_AVICULTURA = 196;
+
+	/**
+	 *
+	 */
+	const POSTOS_DE_GASOLINA_SERVICOS = 197;
+
+	/**
+	 *
+	 */
+	const INSTRUMENTOS_PRECISAO_OU_MEDICAO_LOJAS = 198;
+
+	/**
+	 *
+	 */
+	const FARMACEUTICOS_PROD_LOJAS_DEP_VIDE_FAR = 199;
+
+	/**
+	 *
+	 */
+	const PRODUTOS_QUIMICOS_SEM_INFLAMAVEIS_LOJA_DEPOSITO = 200;
+
+	/**
+	 *
+	 */
+	const PRODUTOS_QUIMICOS_SEM_INFLAMAVEIS_FABRICA = 201;
+
+	/**
+	 *
+	 */
+	const PRODUTOS_QUIMICOS_DEPOSITO_DE_PRODUTOS = 202;
+
+	/**
+	 *
+	 */
+	const PROTESE_OFICINAS = 203;
+
+	/**
+	 *
+	 */
+	const QUITANDAS_FRUTAS_VERDURAS_E_LEGUMES_LOJAS_DEPOSITO = 204;
+
+	/**
+	 *
+	 */
+	const RACOES_BALANCEADAS_FABRICA = 205;
+
+	/**
+	 *
+	 */
+	const RACOES_BALANCEADAS_LOJAS_DEPOSITOS = 206;
+
+	/**
+	 *
+	 */
+	const RESTAURANTE_CHOPERIA_CHURRASCARIA_PIZZARIA = 207;
+
+	/**
+	 *
+	 */
+	const RESIDENCIA = 208;
+
+	/**
+	 *
+	 */
+	const ROUPAS_FABRICAS_OU_OFICINAS_DE = 209;
+
+	/**
+	 *
+	 */
+	const ROUPAS_LOJAS_DE = 210;
+
+	/**
+	 *
+	 */
+	const ROUPAS_DEPOSITO_DE = 211;
+
+	/**
+	 *
+	 */
+	const ROUPAS_PARA_LOCACAO_LOJA_DEPOSITO_PERMITINDO_FABRICA = 212;
+
+	/**
+	 *
+	 */
+	const RECARGA_DE_CARTUCHOS_DE_IMPRESSAO = 213;
+
+	/**
+	 *
+	 */
+	const SABAO_OU_SABONETE_FABRICA = 214;
+
+	/**
+	 *
+	 */
+	const SABAO_OU_SABONETE_DEPOSITOS_OU_LOJAS_DE = 215;
+
+	/**
+	 *
+	 */
+	const SAL_DEPOSITO = 216;
+
+	/**
+	 *
+	 */
+	const SERRALHERIAS_S_TRABALHO_COM_MADEIRA = 217;
+
+	/**
+	 *
+	 */
+	const SHOPPING_CENTER = 218;
+
+	/**
+	 *
+	 */
+	const SILK_SCREEN_ESTAMPARIA_DE_ROUPAS_E_TECIDOS_PERMITINDO_A_VENDA_ARTIGOS = 219;
+
+	/**
+	 *
+	 */
+	const SINDICATO_DE_EMPRESAS_E_OU_TRABALHADORES_SEM_MARCENARIA = 220;
+
+	/**
+	 *
+	 */
+	const SORVETE_GELO_LOJA_DEPOSITO = 221;
+
+	/**
+	 *
+	 */
+	const SUPERMERCADOS_MERCEARIAS_EMPORIOS_SECOS_E_MOLHADOS_LOJAS_DEPOSITOS = 222;
+
+	/**
+	 *
+	 */
+	const TAPETES_CARPETES_FORRACOES_OU_CORTINAS = 223;
+
+	/**
+	 *
+	 */
+	const TAPETES_CARPETES_FORRACOES_OU_CORTINAS_S_MADEIRA_LOJA_DEPOSITO = 224;
+
+	/**
+	 *
+	 */
+	const TEATROS_SALOES_DE_CONCERTOS_OU_CINEMAS_EXCLUIDOS_CIRCOS_OU_SIMILARES = 225;
+
+	/**
+	 *
+	 */
+	const TECIDOS_OU_FIOS_FIACAO_OU_TECELAGEM_COM_FIBRAS_NATURAIS = 226;
+
+	/**
+	 *
+	 */
+	const TECIDOS_OU_FIOS_FIACAO_OU_TECELAGEM_COM_FIBRAS_ARTIFICIAIS = 227;
+
+	/**
+	 *
+	 */
+	const TECIDOS_OU_FIOS_PERMITE_ARTIGOS_CAMA_MESA_BANHO_LOJA_DEPOSITO = 228;
+
+	/**
+	 *
+	 */
+	const TELEFONES_INCLUSIVE_CELULARES_LOJA_EXCLUSIVAMENTE_EM_SHOPPINGS = 229;
+
+	/**
+	 *
+	 */
+	const TINTAS_LOJA_DEPOSITO_S_MANIP_PERMITINDO_SE_MAQUINA_P_MISTURA_CORES = 230;
+
+	/**
+	 *
+	 */
+	const TINTAS_SEM_INFLAMAVEIS_FABRICA = 231;
+
+	/**
+	 *
+	 */
+	const TINTURARIAS_INCLUSIVE_LAVANDERIAS_INDUSTRIAIS_DE_ROUPAS_FIOS_TECIDOS = 232;
+
+	/**
+	 *
+	 */
+	const TRANSPORTADORA_EXCLUIDO_DE_INFLAMAVEIS_TOXICOS_OU_CORROSIVOS = 233;
+
+	/**
+	 *
+	 */
+	const VETERINARIO = 234;
+
+	/**
+	 *
+	 */
+	const VIDROS_E_OU_ARTIGOS_DE_VIDROS_FABRICA = 235;
+
+	/**
+	 *
+	 */
+	const VIDROS_OU_ESPELHOS_VIDRACEIRO_LOJAS = 236;
+
+	/**
+	 *
+	 */
+	const TRANSPORTE_DE_PASSAGEIROS = 237;
+
+	/**
+	 *
+	 */
+	const FATURAMENTO_VIDA_DIVERSAS_ATIVIDADES = 238;
+
+	/**
+	 *
+	 */
+	const SEGURO_PARA_EDIFICIO_COM_VARIAS_EMPRESAS = 239;
+
+	/**
+	 *
+	 */
+	const LOTERICAS_ACORDO_CEF = 240;
+
+	/**
+	 *
+	 */
+	const IMOBIL_CORRET_E_ADM_DE_IMOVEIS_A_PARTI = 241;
+
+	/**
+	 *
+	 */
+	const CONCESSIONARIA_EXCLUSIVAMENTE_REVENDA_AUTORIZADA = 242;
+
+	/**
+	 *
+	 */
+	const GUARDA_MOVEIS_OU_STORAGE = 243;
+
+	/**
+	 *
+	 */
+	const ESCOLA_DE_ENSINO_FUNDAMENTAL_MEDIO_E_CRECHES = 244;
+
+	/**
+	 *
+	 */
+	const UNIVERSIDADES_FACULDADES = 245;
+
+	/**
+	 *
+	 */
+	const ESCOLA_PROFISSIONALIZANTES_TECNICOS = 246;
+
+	/**
+	 *
+	 */
+	const ESCOLA_DE_IDIOMAS_CURSO_PREPARATORIO_OU_AUTO_ESCOLA = 247;
+
+	/**
+	 *
+	 */
+	const ESCOLA_DE_INFORMATICA = 248;
+
+	/**
+	 *
+	 */
+	const CONDOMINIO_HORIZONTAL_EMPRESARIAL = 249;
+
+	/**
+	 *
+	 */
+	const BANCAS_DE_JORNAL = 250;
+
+	/**
+	 *
+	 */
+	const BEBIDAS_NAO_ALCOOLICAS_FABRICA_ENGARRAFAMENTO = 251;
+
+	/**
+	 *
+	 */
+	const BIBLIOTECA_SEBO_EXCLUSIVO_PARA_PREDIO = 252;
+
+	/**
+	 *
+	 */
+	const COZINHA_INDUSTRIAL_MASSAS_ALIMENTICIAS_ROTISSERIE = 253;
+
+	/**
+	 *
+	 */
+	const LABORATORIO_DE_DIAGNOSTICO_ANALISES_CLINICAS = 254;
+
+	/**
+	 *
+	 */
+	const LABORATORIO_DE_PESQUISA_ANALISE_FISICA_QUIMICA = 255;
+
+	/**
+	 *
+	 */
+	const LOJAS_DE_DEPTO_EXCETO_ALIMENTOS_PERMITINDO_DEPOSITOS = 256;
+
+	/**
+	 *
+	 */
+	const MERCADO_PUBLICO_EXCLUSIVO_PARA_PREDIO = 257;
+
+	/**
+	 *
+	 */
+	const MUSEU_ANTIQUIDADE_EXCLUSIVO_PARA_PREDIO = 258;
+
+	/**
+	 *
+	 */
+	const SORVETE_GELO_SEM_EMPREGO_DE_MAT_INFLAMAVEL_FABRICA = 259;
+
+	/**
+	 *
+	 */
+	const MULTILET_EXCLUSIVO_PARA_PREDIO = 260;
+
+	/**
+	 *
+	 */
+	const FARINHAS_E_FARELOS_FABRICA = 261;
+
+	/**
+	 *
+	 */
+	const GRAOS_E_CEREAIS_DEPOSITO_OU_LOJA_EXCETO_A_GRANEL = 262;
+
+	/**
+	 *
+	 */
+	const FRUTAS_VERDURAS_E_LEGUMES_COM_BENEFICIAMENTO_EXCLUINDO_ESTUFA = 263;
+
+	/**
+	 *
+	 */
+	const SEMENTES_DEPOSITO_OU_LOJA_EXCETO_A_GRANEL = 264;
+
+	/**
+	 *
+	 */
+	const AUTOMOVEIS_AUTO_ELETRICO_PERMITINDO_VENDA_DE_PECAS_DE_AUTO_ELETRICO = 265;
+
+	/**
+	 *
+	 */
+	const CONSULTORIO_CLINICA_DENTARIA_PAVTO_TERREO_OU_SOBRADO = 266;
+
+	/**
+	 *
+	 */
+	const CONSULTORIO_CLINICA_DENTARIA_A_PARTIR_DO_1_ANDAR = 267;
+
+	/**
+	 *
+	 */
+	const CORTICA_DEPOSITO_OU_LOJA_DE_ARTIGOS = 268;
+
+	/**
+	 *
+	 */
+	const DOCES_IND_E_COM = 269;
+
+	/**
+	 *
+	 */
+	const ELETRODOMESTICOS_LOJA_E_DEPOSITO = 270;
+
+	/**
+	 *
+	 */
+	const ELETROELET_LOJA_DEP_C_OFIC_CONSERTO = 271;
+
+	/**
+	 *
+	 */
+	const ESCRITORIOS_LIMPEZA_VIGILANC_COBRANCA_ENGENH_CONSTRUT_TERREO_SOBRADO = 272;
+
+	/**
+	 *
+	 */
+	const ESCRIT_ENGENHARIA_SERV_LIMPEZA_VIGILANCIA_COBRANCA_A_PARTIR_1_AND = 273;
+
+	/**
+	 *
+	 */
+	const SERV_TEMP_COBR_PREST_SERV_DE_VIG_CONST_TERREO_SOBRADO = 274;
+
+	/**
+	 *
+	 */
+	const DEMAIS_ESCRIT_EXCETO_DESP_BCO_SINDICATO_TERREO_SOBRADO = 275;
+
+	/**
+	 *
+	 */
+	const AGENCIA_DE_TURISMO_E_VIAGENS_A_PARTIR_1_ANDAR = 276;
+
+	/**
+	 *
+	 */
+	const SERV_TEMP_COB_PREST_SERVICO_VIG_CONSTR_A_PARTIR_1_ANDAR = 277;
+
+	/**
+	 *
+	 */
+	const DEMAIS_ESCRIT_EXCETO_DESP_BCO_SINDICATO_A_PARTIR_1_ANDAR = 278;
+
+	/**
+	 *
+	 */
+	const ESCRITORIOS_DE_SERVICOS_DE_INFORMATICA = 279;
+
+	/**
+	 *
+	 */
+	const ESCRIT_EXCETO_MICROS_PERIF_DEP_E_LOJAS_C_EXISTENCIA_DE_MAQ_ART = 280;
+
+	/**
+	 *
+	 */
+	const FERRAGENS_OU_FERRAMENTAS_DEPOSITO_DE = 281;
+
+	/**
+	 *
+	 */
+	const ESTUDIO_FOTOGRAFICO_FOTOGRAFO_LABORATORIO_FOTOGRAFICO = 282;
+
+	/**
+	 *
+	 */
+	const GRAFICAS_OU_TIPOGRAFIAS_COM_ROTOGRAVURA = 283;
+
+	/**
+	 *
+	 */
+	const PRODUTO_PROPRIO_HOTEIS_E_POUSADAS = 284;
+
+	/**
+	 *
+	 */
+	const INFORMATICA_ESCRITORIO_DE_SERVICOS_DE_INFORMATICA = 285;
+
+	/**
+	 *
+	 */
+	const INFORMATICA_LOJA_OU_DEPOSITO_SEM_OFICINA_DE_CONSERTO = 286;
+
+	/**
+	 *
+	 */
+	const MAQ_APARELHOS_ELETRO_MECANICOS_C_MOTOR_INCORP_LOJAS_DEP_ = 287;
+
+	/**
+	 *
+	 */
+	const OFIC_MECANICA_E_OU_ELETRICA_S_VENDA_DE_PECAS_E_ACESSORIOS = 288;
+
+	/**
+	 *
+	 */
+	const PECAS_E_ACESSORIOS_P_VEICULOS_EXCETO_MOTOC_DEP_OU_LOJAS = 289;
+
+	/**
+	 *
+	 */
+	const TORRE_DE_RETRANSMISSAO = 290;
+
+	/**
+	 *
+	 */
+	const SECOS_E_MOLHADOS_SUPERMERCADO_MERCEARIA_LOJA_SEM_VENDA = 291;
+
+	/**
+	 *
+	 */
+	const COMERCIO_VAREJISTA = 292;
+
+	/**
+	 *
+	 */
+	const COMERCIO_ATACADISTA = 293;
+
+	/**
+	 *
+	 */
+	const OUTROS = 294;
+
+	/**
+	 *
+	 */
+	const CONSULTORIOS_ESCOLAS_ESCRITORIOS_E_HOSPITAIS = 295;
+
+	/**
+	 *
+	 */
+	const COMERCIO_E_SERVICOS = 296;
+
+	/**
+	 *
+	 */
+	const INDUSTRIAS = 297;
+
+	/**
+	 *
+	 */
+	const IMOVEIS_DESOCUPADOS_NAO_LOCADOS = 298;
+
+	/**
+	 *
+	 */
+	const COMERCIO_2 = 299;
+
+	/**
+	 *
+	 */
+	const TRANSPORTADORA = 300;
+
+	/**
+	 *
+	 */
+	const LEGADO_OUTROS = 301;
+
+	/**
+	 *
+	 */
+	const ATIVIDADES_AUXILIARES_DOS_SEGUROS_DE_PREVIDENCIA_COMPLEMENTAR = 302;
+
+}
