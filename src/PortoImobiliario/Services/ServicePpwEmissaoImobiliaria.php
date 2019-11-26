@@ -39,6 +39,8 @@ class ServicePpwEmissaoImobiliaria extends Client
                 $executarCalculoProduto->request($request)
             );
 
+            dd($response);
+
             return $executarCalculoProduto->response($response);
         } catch(\SoapFault $SoapFault) {
             return (new PortoResponse)->setSuccess(false)
@@ -48,25 +50,6 @@ class ServicePpwEmissaoImobiliaria extends Client
                 ->setMessage($e->getMessage());
         }
     }
-
-	public function executarCalculoItemProduto($request)
-	{
-		$executarCalculoItemProduto = new ExecutarCalculoItemProdutoFactory();
-
-		try{
-			$response = $this->__soapCall('executarCalculoItemProduto',
-				$executarCalculoItemProduto->request($request)
-			);
-
-			return $executarCalculoItemProduto->response($response);
-		} catch(\SoapFault $SoapFault) {
-			return (new PortoResponse)->setSuccess(false)
-				->setMessage($SoapFault->getMessage());
-		} catch (\Exception $e) {
-			return (new PortoResponse)->setSuccess(false)
-				->setMessage($e->getMessage());
-		}
-	}
 
 	public function criarProposta($request)
 	{
@@ -78,63 +61,6 @@ class ServicePpwEmissaoImobiliaria extends Client
 			);
 
 			return $criarProposta->response($response);
-		} catch(\SoapFault $SoapFault) {
-			return (new PortoResponse)->setSuccess(false)
-				->setMessage($SoapFault->getMessage());
-		} catch (\Exception $e) {
-			return (new PortoResponse)->setSuccess(false)
-				->setMessage($e->getMessage());
-		}
-	}
-
-	public function buscarDadosApoliceEndosso($request)
-	{
-		$buscarDadosApoliceEndosso = new BuscarDadosApoliceEndossoFactory();
-
-		try{
-			$response = $this->__soapCall('buscarDadosApoliceEndosso',
-				$buscarDadosApoliceEndosso->request($request)
-			);
-
-			return $buscarDadosApoliceEndosso->response($response);
-		} catch(\SoapFault $SoapFault) {
-			return (new PortoResponse)->setSuccess(false)
-				->setMessage($SoapFault->getMessage());
-		} catch (\Exception $e) {
-			return (new PortoResponse)->setSuccess(false)
-				->setMessage($e->getMessage());
-		}
-	}
-
-	public function buscarDadosApoliceRenovacao($request)
-	{
-		$buscarDadosApoliceRenovacao = new BuscarDadosApoliceRenovacaoFactory();
-
-		try{
-			$response = $this->__soapCall('buscarDadosApoliceRenovacao',
-				$buscarDadosApoliceRenovacao->request($request)
-			);
-
-			return $buscarDadosApoliceRenovacao->response($response);
-		} catch(\SoapFault $SoapFault) {
-			return (new PortoResponse)->setSuccess(false)
-				->setMessage($SoapFault->getMessage());
-		} catch (\Exception $e) {
-			return (new PortoResponse)->setSuccess(false)
-				->setMessage($e->getMessage());
-		}
-	}
-
-	public function buscarDadosItem($request)
-	{
-		$buscarDadosItem = new BuscarDadosItemFactory();
-
-		try{
-			$response = $this->__soapCall('buscarDadosItem',
-				$buscarDadosItem->request($request)
-			);
-
-			return $buscarDadosItem->response($response);
 		} catch(\SoapFault $SoapFault) {
 			return (new PortoResponse)->setSuccess(false)
 				->setMessage($SoapFault->getMessage());

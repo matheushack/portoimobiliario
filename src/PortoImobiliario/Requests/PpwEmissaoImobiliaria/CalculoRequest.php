@@ -177,7 +177,7 @@ class CalculoRequest
     /**
      * @var
      */
-    private $__origem__;
+    private $__origem__ = 0;
 
     /**
      * @var
@@ -207,12 +207,12 @@ class CalculoRequest
     /**
      * @var
      */
-    private $descTecnicoPromocional;
+    private $descTecnicoPromocional = 2;
 
     /**
      * @var
      */
-    private $__isIniciaForm__;
+    private $__isIniciaForm__ = 2;
 
     /**
      * @var
@@ -392,22 +392,22 @@ class CalculoRequest
     /**
      * @var
      */
-    private $codigoOferta;
+    private $codigoOferta = 1029;
 
     /**
      * @var
      */
-    private $numeroVersaoProdutoComercial;
+    private $numeroVersaoProdutoComercial = 1;
 
     /**
      * @var
      */
-    private $numeroSequenciaVersaoOferta;
+    private $numeroSequenciaVersaoOferta = 0;
 
     /**
      * @var
      */
-    private $numeroSequenciaVersaoProdutoComercial;
+    private $numeroSequenciaVersaoProdutoComercial = 0;
 
     /**
      * @var
@@ -437,7 +437,7 @@ class CalculoRequest
     /**
      * @var
      */
-    private $codigoEmpresaPorto;
+    private $codigoEmpresaPorto = '0001';
 
     /**
      * @var
@@ -447,12 +447,12 @@ class CalculoRequest
     /**
      * @var
      */
-    private $codigoRamo;
+    private $codigoRamo = '00114';
 
     /**
      * @var
      */
-    private $codigoGrupoComercial;
+    private $codigoGrupoComercial = 3;
 
     /**
      * @var
@@ -462,12 +462,12 @@ class CalculoRequest
     /**
      * @var
      */
-    private $flagImprimirCodigoOrcamento;
+    private $flagImprimirCodigoOrcamento = 1;
 
     /**
      * @var
      */
-    private $tipoOrcamentoAtendimentoSelecionado;
+    private $tipoOrcamentoAtendimentoSelecionado = 1;
 
     /**
      * @var
@@ -477,7 +477,7 @@ class CalculoRequest
     /**
      * @var
      */
-    private $numeroVersaoOferta;
+    private $numeroVersaoOferta = 1;
 
     /**
      * @var
@@ -487,12 +487,12 @@ class CalculoRequest
     /**
      * @var
      */
-    private $cpflogadoportal;
+    private $cpflogadoportal = 'X';
 
     /**
      * @var
      */
-    private $salvarIncluirAlterarItem;
+    private $salvarIncluirAlterarItem = 'S';
 
     /**
      * @var
@@ -582,7 +582,7 @@ class CalculoRequest
     /**
      * @var
      */
-    private $codigoModalidade;
+    private $codigoModalidade = '0003';
 
     /**
      * @var
@@ -617,7 +617,7 @@ class CalculoRequest
     /**
      * @var
      */
-    private $situacaoCalculo;
+    private $situacaoCalculo = 1;
 
     /**
      * @var
@@ -632,7 +632,7 @@ class CalculoRequest
     /**
      * @var
      */
-    private $numeroVersaoRegraObjetoRisco;
+    private $numeroVersaoRegraObjetoRisco = 1;
 
     /**
      * @var
@@ -657,12 +657,12 @@ class CalculoRequest
     /**
      * @var
      */
-    private $finalidadeFormulario;
+    private $finalidadeFormulario = 0;
 
     /**
      * @var
      */
-    private $portoSeguroServicoPlanoBasico;
+    private $portoSeguroServicoPlanoBasico = 41;
 
     /**
      * @var
@@ -677,7 +677,7 @@ class CalculoRequest
     /**
      * @var
      */
-    private $method;
+    private $method = 'salvarOrcamento';
 
     /**
      * @var
@@ -697,7 +697,13 @@ class CalculoRequest
     /**
      * @var
      */
-    private $cpfLogado;
+    private $cpfLogado = 'X';
+
+	/**
+	 * @var
+	 */
+	private $codigoPessoa;
+
 
     /**
      * @return mixed
@@ -3146,5 +3152,23 @@ class CalculoRequest
         $this->cpfLogado = $cpfLogado;
         return $this;
     }
+
+	/**
+	 * @return mixed
+	 */
+	public function getCodigoPessoa()
+	{
+		return $this->codigoPessoa;
+	}
+
+	/**
+	 * @param mixed $codigoPessoa
+	 * @return CalculoRequest
+	 */
+	public function setCodigoPessoa($codigoPessoa)
+	{
+		$this->codigoPessoa = $codigoPessoa;
+		return $this;
+	}
 
 }
